@@ -4,6 +4,7 @@ Ext.define('myDemoApp.view.home.HomeView',{
 	cls: 'homeview',
 	controller: {type: 'homeviewcontroller'},
 	viewModel: {type: 'homeviewmodel'},
+	store: {type: 'personalviewstore'},
 	requires: [
 		'myDemoApp.view.home.HomeViewModel',
         'Ext.form.FieldSet',
@@ -25,11 +26,33 @@ Ext.define('myDemoApp.view.home.HomeView',{
 		  border: true
 	  },
    
-	  items: [{
+	  items: [
+		{
+			xtype: 'searchfield',
+			label: 'Search',
+			name: 'search'
+		},
+		  {
 		  title: 'Name',
-		  width: 1200,
+		  width: 1140,
 		  margin: '0 10 0 0',
-		  html: 'Einführung von einem Lagerwaltungssystem (LVS) und mobilen Devices'
+		  html: 'Einführung von einem Lagerwaltungssystem (LVS) und mobilen Devices',
+		 /* data: {               
+			xtype: 'grid',            
+			store: 'homeviewstore',
+			dataIndex: 'name',
+			flex: 1                                       
+		}, */	 
+		  data: [
+				{
+					xtype: 'grid',
+					text: 'Name',
+					store: 'personalviewstore',               
+					dataIndex: 'name',
+					editable: true,
+					width: 200,
+					cell: {userCls: 'bold'}
+				}]
 	  }, 
 	  {
 		  title: 'Kurzbeschreibung',
@@ -40,7 +63,7 @@ Ext.define('myDemoApp.view.home.HomeView',{
 	  {
 		  title: 'Unternehman',
 		  width: 280,
-		  height: 160,
+		  height: 170,
 		  margin: '0 5 0 0',
 		  items: [
 		  {
@@ -71,7 +94,7 @@ Ext.define('myDemoApp.view.home.HomeView',{
 	  },
 	  {
 		  title: 'Skizze und Einordnung in individuelle Wertschöpfungskette',
-		  width: 850,
+		  width: 847,
 		  items: [
 			  {
 				  xtype: 'image',
@@ -83,14 +106,14 @@ Ext.define('myDemoApp.view.home.HomeView',{
 	  },
 	  {
 		title: 'Nutzenversprechen',
-		width: 550,
+		width: 560,
 		height: 160,
 		margin: '0 10 0 0',
 		html: '<ul><li>Höhere Transparenz der Materialflüsse</li><li>Höhere Flexibilität der Prozess</li>'
 	},
 	{
-		title: 'Nutzenversprechen',
-		width: 550,
+		title: 'Herausforderungen',
+		width: 571,
 		height: 160,
 		margin: '0 10 0 0',
 		html: '<ul><li>Hohes Investment (IT, Software, Devices)</li><li>Mitarbeiter Knowhow</li><li>Prozessanpassung</li><li>Datennutzung?</li>' 
@@ -111,7 +134,7 @@ Ext.define('myDemoApp.view.home.HomeView',{
 	},
 	{
 		title: 'Auswirkungen Technik',
-		width: 350,
+		width: 380,
 		height: 160,
 		margin: '0 10 0 0',
 		html: '<li>Mehr und aufwendigere Technik</li>'

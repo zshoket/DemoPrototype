@@ -1,5 +1,5 @@
 Ext.define('myDemoApp.view.main.detail.DetailView', {
-	extend: 'Ext.Container',
+	/* extend: 'Ext.Container',
 	xtype: 'detailview',
   cls: 'detailview',
   layout: 'fit',
@@ -9,5 +9,5 @@ Ext.define('myDemoApp.view.main.detail.DetailView', {
       style: 'background:white', 
       html: '<div style="padding:10px;font-size:24px;">detailview</div>'
     }
-  ]
+  ] */
 })

@@ -9,13 +9,13 @@ Ext.define('myDemoApp.view.main.header.HeaderView', {
             cls: 'headerviewtext',
             bind: { html: '{heading}' }
         },
-        '->',
+        /* '->',
         {
             xtype: 'button',
             ui: 'headerbutton',
             reference: 'detailtoggle',
             handler: 'onHeaderViewDetailToggle',
             iconCls: 'x-fa fa-arrow-left'
-        }
+        } */
     ]
 });

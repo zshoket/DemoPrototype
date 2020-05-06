@@ -46,7 +46,7 @@ Ext.define('myDemoApp.view.main.MainViewController', {
 		vm.set('navCollapsed', !vm.get('navCollapsed'));
 	},
 
-	onHeaderViewDetailToggle: function (button) {
+	/* onHeaderViewDetailToggle: function (button) {
 		var vm = this.getViewModel();
 		vm.set('detailCollapsed', !vm.get('detailCollapsed'));
 		if(vm.get('detailCollapsed')===true) {
@@ -55,7 +55,7 @@ Ext.define('myDemoApp.view.main.MainViewController', {
 		else {
 			button.setIconCls('x-fa fa-arrow-right');
 		}
-	},
+	}, */
 
 	onBottomViewlogout: function () {
 		localStorage.setItem("LoggedIn", false);

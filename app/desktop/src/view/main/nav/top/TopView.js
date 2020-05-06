@@ -13,13 +13,13 @@ Ext.define('myDemoApp.view.main.nav.top.TopView', {
                 hidden: '{navCollapsed}' 
             }
         },
-        '->',
+      /*   '->',
         {
             xtype: 'button',
             ui: 'topviewbutton',
             reference: 'navtoggle',
             handler: 'onTopViewNavToggle',
             iconCls: 'x-fa fa-navicon'
-        }
+        } */
     ]
 });
