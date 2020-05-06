@@ -1,11 +1,8 @@
-Ext.define('myDemoApp.view.home.HomeViewStore', {
+Ext.define('myDemoApp.store.HomeViewStore', {
     extend: 'Ext.data.Store',
     alias: 'store.homeviewstore',
-    fields: [
-        'name', 'unternehmen','reifegrad','nutzenversprechen','auswirkungenMensch','auswirkungenOrganisation','auswirkungenTechnik'
-    ],
+    model: 'myDemoApp.model.Usecase',
     
-
     proxy: {
         type: "ajax", 
         url: "http://localhost:3001/api/documents",
@@ -15,5 +12,4 @@ Ext.define('myDemoApp.view.home.HomeViewStore', {
         }
     },
     autoLoad: true
-        
 });
