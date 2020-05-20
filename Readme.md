@@ -1,2 +1,2 @@
-# myDemoApp application
+# SORISMA application
 # Sencha App Prototype for Databank

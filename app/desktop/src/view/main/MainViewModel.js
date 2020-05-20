@@ -1,8 +1,8 @@
-Ext.define("myDemoApp.view.main.MainViewModel", {
+Ext.define("SORISMA.view.main.MainViewModel", {
     extend: "Ext.app.ViewModel",
     alias: "viewmodel.mainviewmodel",
     data: {
-        name: "myDemoApp",
+        name: "SORISMA",
         navCollapsed: false,
         navview_max_width: 300,
         navview_min_width: 44,

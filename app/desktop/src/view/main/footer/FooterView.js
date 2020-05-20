@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.view.main.footer.FooterView', {
+Ext.define('SORISMA.view.main.footer.FooterView', {
     extend: 'Ext.Toolbar',
     xtype: 'footerview',
     cls: 'footerview',
@@ -7,7 +7,7 @@ Ext.define('myDemoApp.view.main.footer.FooterView', {
         {
             xtype: 'container',
             cls: 'footerviewtext',
-        html: 'Ext JS version: ' + Ext.versions.extjs.version
+        html: 'Sorisma Risiko Demo' 
             //bind: { html: '{name} footer' }
         }
     ]

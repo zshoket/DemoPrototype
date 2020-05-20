@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.view.main.nav.top.TopView', {
+Ext.define('SORISMA.view.main.nav.top.TopView', {
     extend: 'Ext.Toolbar',
     xtype: 'topview',
     cls: 'topview',

@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.view.main.nav.NavView', {
+Ext.define('SORISMA.view.main.nav.NavView', {
     extend: 'Ext.Panel',
     xtype: 'navview',
     controller: "navviewcontroller",

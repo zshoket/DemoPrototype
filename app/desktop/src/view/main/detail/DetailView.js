@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.view.main.detail.DetailView', {
+Ext.define('SORISMA.view.main.detail.DetailView', {
 	/* extend: 'Ext.Container',
 	xtype: 'detailview',
   cls: 'detailview',

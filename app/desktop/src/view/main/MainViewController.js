@@ -1,4 +1,4 @@
-Ext.define("myDemoApp.view.main.MainViewController", {
+Ext.define("SORISMA.view.main.MainViewController", {
     extend: "Ext.app.ViewController",
     alias: "controller.mainviewcontroller",
 

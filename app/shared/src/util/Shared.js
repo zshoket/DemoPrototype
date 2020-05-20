@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.util.Shared', {
+Ext.define('SORISMA.util.Shared', {
 	alternateClassName: ['Shared'],
 	singleton: true,
 

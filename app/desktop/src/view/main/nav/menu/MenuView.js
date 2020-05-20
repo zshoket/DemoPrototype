@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.view.nav.menu.MenuView', {
+Ext.define('SORISMA.view.nav.menu.MenuView', {
     extend: 'Ext.list.Tree',
     xtype: 'menuview',
     viewModel: {},

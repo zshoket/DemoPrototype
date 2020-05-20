@@ -1,13 +1,13 @@
-Ext.define("myDemoApp.view.home.HomeView", {
+Ext.define("SORISMA.view.home.HomeView", {
     xtype: "homeview",
 	extend: "Ext.form.Panel",
 	id: 'homeview',
     cls: "homeview",
     controller: { type: "homeviewcontroller" },
     viewModel: { type: "homeviewmodel" },
-    store: Ext.create("myDemoApp.store.HomeViewStore", {}), // ein Store ist in einem Panel nicht vergesehen
+    store: Ext.create("SORISMA.store.HomeViewStore", {}), // ein Store ist in einem Panel nicht vergesehen
     requires: [
-        "myDemoApp.store.HomeViewStore",
+        "SORISMA.store.HomeViewStore",
         "Ext.form.FieldSet",
         "Ext.form.Checkbox",
         "Ext.form.field.*",
@@ -40,8 +40,6 @@ Ext.define("myDemoApp.view.home.HomeView", {
 			bind: {
 				html: '{home_name}'
 			},
-            // html:
-            //     "Einführung von einem Lagerwaltungssystem (LVS) und mobilen Devices"
         },
         {
             title: "Kurzbeschreibung",
@@ -50,23 +48,15 @@ Ext.define("myDemoApp.view.home.HomeView", {
 			bind: {
 				html: '{home_kurzbeschreibung}'
 			},
-            // html:
-            //     "<ul><li>Einführung von papierloser Kommissionierung/innerbetrieblicher Logistik</li><li>Einführung neuer Lagerstrategien (Verdichtung etc.)</li><li>Erfassung von qualitätsrelevanten Daten (Sendung fotografieren, Ladesicherung)</li></ul>"
         },
         {
-            title: "Unternehman",
+            title: "Unternehmen",
             width: 280,
             height: 170,
             margin: "0 5 0 0",
-            items: [
-                {
-                    xtype: "image",
-                    width: 300,
-                    height: 150,
-                    src:
-                        "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/122014/mit_grayred.png"
-                }
-            ]
+             bind: {
+                 html: '<img src="{home_unternehmen}" alt="mit" width="250" height="150">'
+             }
         },
         {
             title: "Reifegrad",
@@ -79,6 +69,44 @@ Ext.define("myDemoApp.view.home.HomeView", {
                     width: 300,
                     cls: "x-check-group-alt",
                     horizontal: true,
+                    listeners: {
+                        change: function (field, newValue, oldValue) {
+                            var group = field.up('checkboxgroup');
+
+                            if (field.name == 'Basis-Lösung') {
+                                group.doCheckUnCheckAll(newValue);
+                            } else {
+                                var len = group.query('[name=mycheck]').length,
+                                    allCB = group.down('[name=all]');
+
+                                if (newValue) {
+                                    group.checkedArr.push(field.inputValue)
+                                } else {
+                                    Ext.Array.remove(group.checkedArr, field.inputValue);
+                                }
+                                group.doSetCBValue(allCB, len == group.checkedArr.length);
+                            }     
+                },
+
+                            doSetCBValue: function (f, v) {
+                                //Check or uncheck
+                                f.suspendEvent('change');
+                                f.setValue(v);
+                                f.resumeEvent('change');
+                            },
+                        },
+                        doCheckUnCheckAll: function (isCheck) {
+                            this.query('[name=mycheck]').forEach(f => {
+                                this.doSetCBValue(f, isCheck);
+                                //For checking to other checkbox is checked or not
+                                if (isCheck) {
+                                    if (this.checkedArr.indexOf(f.inputValue) == -1)
+                                        this.checkedArr.push(f.inputValue);
+                                } else {
+                                    Ext.Array.remove(this.checkedArr, f.inputValue);
+                                }
+                            });
+                        },
                     columns: 1,
                     items: [
                         {
@@ -109,39 +137,45 @@ Ext.define("myDemoApp.view.home.HomeView", {
             width: 560,
             height: 160,
             margin: "0 10 0 0",
-            html:
-                "<ul><li>Höhere Transparenz der Materialflüsse</li><li>Höhere Flexibilität der Prozess</li>"
+            bind: {
+				html: '{home_nutzenversprechen}'
+			},
         },
         {
             title: "Herausforderungen",
             width: 571,
             height: 160,
             margin: "0 10 0 0",
-            html:
-                "<ul><li>Hohes Investment (IT, Software, Devices)</li><li>Mitarbeiter Knowhow</li><li>Prozessanpassung</li><li>Datennutzung?</li>"
+            bind: {
+				html: '{home_herausforderungen}'
+			},
         },
         {
             title: "Auswirkungen Mensch",
             width: 390,
             height: 160,
             margin: "0 10 0 0",
-            html:
-                "<li>+ Arbeitserleichterung</li><li>+ planbare Arbeitsschritte</li><li>- Neuer Arbeitsalltag</li><li>- Transparenz des Mitarbeiters (Leistungsfähigkeit)</li>"
+            bind: {
+				html: '{home_auswirkungenMensch}'
+			},
         },
         {
             title: "Auswirkungen Organisation",
             width: 350,
             height: 160,
             margin: "0 10 0 0",
-            html:
-                "<li>Prozesse digital abgebildet</li><li>Weniger persönlicher Kontakt (informeller Austausch geht zurück / fehlt)</li>"
+            bind: {
+				html: '{home_auswirkungenOrganisation}'
+			},
         },
         {
             title: "Auswirkungen Technik",
             width: 380,
             height: 160,
             margin: "0 10 0 0",
-            html: "<li>Mehr und aufwendigere Technik</li>"
+            bind: {
+				html: '{home_auswirkungenTechnik}'
+			},
         }
     ]
 });

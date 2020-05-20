@@ -1,4 +1,4 @@
-Ext.define("myDemoApp.view.main.MainView", {
+Ext.define("SORISMA.view.main.MainView", {
     extend: "Ext.Container",
     xtype: "mainview",
     controller: "mainviewcontroller",

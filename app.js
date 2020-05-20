@@ -1,4 +1,4 @@
 Ext.application({
-	extend: 'myDemoApp.Application',
-	name: 'myDemoApp'
+	extend: 'SORISMA.Application',
+	name: 'SORISMA'
 });

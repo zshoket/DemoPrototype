@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.view.personnel.PersonnelView',{
+Ext.define('SORISMA.view.personnel.PersonnelView',{
     extend: 'Ext.grid.Grid',
     xtype: 'personnelview',
     cls: 'personnelview',

@@ -1,11 +1,12 @@
-Ext.define('myDemoApp.store.PersonnelViewStore', {
+Ext.define('SORISMA.store.PersonnelViewStore', {
     extend: 'Ext.data.Store',
     alias: 'store.personnelviewstore',
-    model: 'myDemoApp.model.Usecase',
+    model: 'SORISMA.model.Usecase',
 
     proxy: {
         type: "ajax", 
-        url: "http://localhost:3001/api/documents",
+        url: "http://localhost:3002/getAll",
+    //    url: "http://localhost:3001/api/documents",
         headers: {
             Accept: "application/json"
         },
@@ -16,34 +17,5 @@ Ext.define('myDemoApp.store.PersonnelViewStore', {
     },
     autoLoad: true,
 
-    // // Testdaten
-    // data: {
-    //     items: [
-    //         {
-    //             id: 0,
-    //             name: "test35443",
-    //             unternehmen: "testUnternehmen",
-    //             kurzbeschreibung: "testKurzbes",
-    //             reifegrad: "testReifegrad",
-    //             nutzenversprechen: "testnutzenversprechen",
-    //             herausforderungen: "testherausforderungen",
-    //             auswirkungenMensch: "testauswirkungenMensch",
-    //             auswirkungenOrganisation: "testauswirkungenOrganisation",
-    //             auswirkungenTechnik: "testauswirkungenTechnik"
-    //         },
-    //         {
-    //             id: 1,
-    //             name: "testtest",
-    //             unternehmen: "testUnternehmentestUnternehmen",
-    //             kurzbeschreibung: "testKurzbes",
-    //             reifegrad: "testReifegrad",
-    //             nutzenversprechen: "testnutzenversprechen",
-    //             herausforderungen: "testherausforderungen",
-    //             auswirkungenMensch: "testauswirkungenMensch",
-    //             auswirkungenOrganisation: "testauswirkungenOrganisation",
-    //             auswirkungenTechnik: "testauswirkungenTechnik"
-    //         }
-    //     ]
-    // }
 
 });

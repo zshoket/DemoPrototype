@@ -1,10 +1,10 @@
-Ext.define("myDemoApp.model.Usecase", {
+Ext.define("SORISMA.model.Usecase", {
     extend: "Ext.data.Model",
     xtype: "model.usecasemodel",
     fields: [
         { name: "id", type: "auto", defaultValue: null },
         { name: "name", type: "string" },
-        { name: "unternehmen", type: "string" },
+        { name: "unternehmen", type: "auto" },
         { name: "kurzbeschreibung", type: "auto" },
         { name: "reifegrad", type: "auto" },
         { name: "nutzenversprechen", type: "auto" },

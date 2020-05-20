@@ -1,7 +1,7 @@
-Ext.define('myDemoApp.Application', {
+Ext.define('SORISMA.Application', {
 	extend: 'Ext.app.Application',
-	name: 'myDemoApp',
-	requires: ['myDemoApp.*'],
+	name: 'SORISMA',
+	requires: ['SORISMA.*'],
 	defaultToken: 'homeview',
 
 	removeSplash: function () {

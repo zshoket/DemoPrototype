@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.view.main.nav.bottom.BottomView', {
+Ext.define('SORISMA.view.main.nav.bottom.BottomView', {
 	extend: 'Ext.Toolbar',
 	xtype: 'bottomview',
 	cls: 'bottomview',

@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.view.personnel.PersonnelViewController', {
+Ext.define('SORISMA.view.personnel.PersonnelViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.personnelviewcontroller',
 

@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.view.main.nav.NavViewController', {
+Ext.define('SORISMA.view.main.nav.NavViewController', {
 	extend: "Ext.app.ViewController",
 	alias: "controller.navviewcontroller",
 

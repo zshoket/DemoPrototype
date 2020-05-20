@@ -1,4 +1,4 @@
-Ext.define('myDemoApp.view.main.header.HeaderView', {
+Ext.define('SORISMA.view.main.header.HeaderView', {
     extend: 'Ext.Toolbar',
     xtype: 'headerview',
     cls: 'headerview',
