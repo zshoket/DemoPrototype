@@ -2,7 +2,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
     extend: "Ext.app.ViewModel",
     alias: "viewmodel.mainviewmodel",
     data: {
-        name: "SORISMA",
+        name: '<img src="/uploads/logo.png" alt="Sorismalogo">',
         navCollapsed: false,
         navview_max_width: 300,
         navview_min_width: 44,
