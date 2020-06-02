@@ -21,8 +21,20 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
             cell: {userCls: 'bold'}
         },
         {
+            text: 'Dimension',
+            dataIndex: 'dimension',
+            editable: true,
+            width: 230
+        },
+        {
             text: 'Unternehmen',
             dataIndex: 'unternehmen',
+            editable: true,
+            width: 230
+        },
+        {
+            text: 'Einordnung in die Wertschöpfungs-kette',
+            dataIndex: 'einordnungKette',
             editable: true,
             width: 230
         },
@@ -45,20 +57,20 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
             width: 230
         },
         {
-            text: 'Auswirkungen Mensch',
-            dataIndex: 'auswirkungenMensch',
+            text: 'veränderungen Mensch',
+            dataIndex: 'veränderungenMensch',
             editable: false,
             width: 230
         },
         {
-            text: 'Auswirkungen Organisation',
-            dataIndex: 'auswirkungenOrganisation',
+            text: 'veränderungen Organisation',
+            dataIndex: 'veränderungenOrganisation',
             editable: false,
             width: 230
         },
         {
-            text: 'Auswirkungen Technik',
-            dataIndex: 'auswirkungenTechnik',
+            text: 'veränderungen Technik',
+            dataIndex: 'veränderungenTechnologie',
             editable: false,
             width: 230
         }        

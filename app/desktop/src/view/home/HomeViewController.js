@@ -27,13 +27,15 @@ Ext.define('SORISMA.view.home.HomeViewController', {
 			vm.set('home_id', data.id)
 			vm.set('home_name', data.name)
 			vm.set('home_unternehmen', data.unternehmen)
+			vm.set('home_dimension', data.dimension)
+			vm.set('home_einordnungKette', data.einordnungKette)
 			vm.set('home_kurzbeschreibung', data.kurzbeschreibung)
 			vm.set('home_reifegrad', data.reifegrad)
 			vm.set('home_nutzenversprechen', data.nutzenversprechen)
 			vm.set('home_herausforderungen', data.herausforderungen)
-			vm.set('home_auswirkungenMensch', data.auswirkungenMensch)
-			vm.set('home_auswirkungenOrganisation', data.auswirkungenOrganisation)
-			vm.set('home_auswirkungenTechnik', data.auswirkungenTechnik)
+			vm.set('home_veränderungenMensch', data.veränderungenMensch)
+			vm.set('home_veränderungenOrganisation', data.veränderungenOrganisation)
+			vm.set('home_veränderungenTechnologie', data.veränderungenTechnologie)
 		}
 	}
 });

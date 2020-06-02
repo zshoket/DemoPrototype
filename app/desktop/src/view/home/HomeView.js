@@ -28,36 +28,44 @@ Ext.define("SORISMA.view.home.HomeView", {
     },
 
     items: [
-        {
+     /*    {
             xtype: "searchfield",
             label: "Search",
             name: "search"
-        },
+        }, */
         {
             title: "Name",
-            width: 1140,
+            width: 950,
 			margin: "0 10 0 0",
 			bind: {
 				html: '{home_name}'
-			},
+            }
+        },
+        {
+            title: "Dimension",
+            width: 175,
+			margin: "0 10 0 0",
+			bind: {
+                html: '<b>{home_dimension}</b>',
+            }
         },
         {
             title: "Kurzbeschreibung",
             width: 850,
 			margin: "0 10 0 0",
 			bind: {
-				html: '{home_kurzbeschreibung}'
-			},
+                html: '{home_kurzbeschreibung}',
+            }
         },
         {
             title: "Unternehmen",
             width: 280,
             height: 170,
             margin: "0 5 0 0",
-             bind: {
+              bind: {
                  html: '<img src="{home_unternehmen}" alt="mit" width="250" height="150">'
              }
-        },
+         },
         {
             title: "Reifegrad",
             width: 290,
@@ -69,7 +77,7 @@ Ext.define("SORISMA.view.home.HomeView", {
                     width: 300,
                     cls: "x-check-group-alt",
                     horizontal: true,
-                    listeners: {
+/*                     listeners: {
                         change: function (field, newValue, oldValue) {
                             var group = field.up('checkboxgroup');
 
@@ -106,31 +114,26 @@ Ext.define("SORISMA.view.home.HomeView", {
                                     Ext.Array.remove(this.checkedArr, f.inputValue);
                                 }
                             });
-                        },
+                        }, */
                     columns: 1,
                     items: [
                         {
                             boxLabel: "Basis-Lösung",
                             name: "cb-col-1",
-                            checked: true
                         },
                         { boxLabel: "Schlüssel-Lösung", name: "cb-col-2" },
-                        { boxLabel: "Schrittmacher-Lösung", name: "cb-col-3" }
+                        { boxLabel: "Schrittmacher-Lösung", name: "cb-col-3",checked: true }
                     ]
                 }
             ]
         },
         {
-            title: "Skizze und Einordnung in individuelle Wertschöpfungskette",
+            title: "Einordnung in die Wertschöpfungs-kette",
             width: 847,
-            items: [
-                {
-                    xtype: "image",
-                    height: 101,
-                    width: 800,
-                    src: "https://i.ibb.co/4gGNxVY/img01.png"
-                }
-            ]
+            bind: {
+                html: '<ul><li>Unternehmensinfrastruktur</li><li>Personalmanagement</li><li>Forschung und Entwicklung</li><li>Beschaffung</li><li>Fertigung</li><li>Marketing & Vertrieb</li><li>Logistik</li><li>Service</li></ul>'
+                //{home_einordnungKette}
+            },
         },
         {
             title: "Nutzenversprechen",
@@ -151,30 +154,30 @@ Ext.define("SORISMA.view.home.HomeView", {
 			},
         },
         {
-            title: "Auswirkungen Mensch",
+            title: "Veränderungen Mensch",
             width: 390,
             height: 160,
             margin: "0 10 0 0",
             bind: {
-				html: '{home_auswirkungenMensch}'
+				html: '{home_veränderungenMensch}'
 			},
         },
         {
-            title: "Auswirkungen Organisation",
+            title: "Veränderungen Organisation",
             width: 350,
             height: 160,
             margin: "0 10 0 0",
             bind: {
-				html: '{home_auswirkungenOrganisation}'
+				html: '{home_veränderungenOrganisation}'
 			},
         },
         {
-            title: "Auswirkungen Technik",
+            title: "Veränderungen Technologie",
             width: 380,
             height: 160,
             margin: "0 10 0 0",
             bind: {
-				html: '{home_auswirkungenTechnik}'
+				html: '{home_veränderungenTechnologie}'
 			},
         }
     ]

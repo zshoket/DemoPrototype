@@ -6,8 +6,10 @@
   "template": "moderndesktop",
   "indexHtmlPath": "index.html",
   "requires": [
-    "font-awesome"
-  ],
+    "font-awesome",
+        "chart",
+        "charts"
+    ],
 
   "builds": {
     "desktop": {
