@@ -12,8 +12,8 @@ Ext.define('SORISMA.view.home.HomeViewModel', {
         home_reifegrad: "",
         home_nutzenversprechen: "",
         home_herausforderungen: "",
-        home_veränderungenMensch: "",
-        home_veränderungenOrganisation: "",
-        home_veränderungenTechnologie: ""
+        home_veraenderungenMensch: "",
+        home_veraenderungenOrganisation: "",
+        home_veraenderungenTechnologie: "",
     }
 });

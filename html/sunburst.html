@@ -1,0 +1,159 @@
+<div id="anychart-embed-samples-bct-sunburst-chart-01" class="anychart-embed anychart-embed-samples-bct-sunburst-chart-01">
+<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-sunburst.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<div id="ac_style_samples-bct-sunburst-chart-01" style="display:none;">
+html, body, #container {
+    width: 150%;
+    height: 170%;
+    margin: 0;
+    padding: 0;
+}
+</div>
+<script>(function(){
+function ac_add_to_head(el){
+	var head = document.getElementsByTagName('head')[0];
+	head.insertBefore(el,head.firstChild);
+}
+function ac_add_link(url){
+	var el = document.createElement('link');
+	el.rel='stylesheet';el.type='text/css';el.media='all';el.href=url;
+	ac_add_to_head(el);
+}
+function ac_add_style(css){
+	var ac_style = document.createElement('style');
+	if (ac_style.styleSheet) ac_style.styleSheet.cssText = css;
+	else ac_style.appendChild(document.createTextNode(css));
+	ac_add_to_head(ac_style);
+}
+ac_add_link('https://cdn.anychart.com/releases/8.7.1/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4');
+ac_add_style(document.getElementById("ac_style_samples-bct-sunburst-chart-01").innerHTML);
+ac_add_style(".anychart-embed-samples-bct-sunburst-chart-01{width:600px;height:450px;}");
+})();</script>
+<div id="container"></div>
+<script>
+anychart.onDocumentReady(function () {
+
+var item1 = {
+    color: '#F54F4A'
+};
+var item2 = {
+    color: '#FF8C75'
+};
+var item3 = {
+    color: '#FFB499'
+};
+
+    // create data
+    var data = [
+      {name: "SORISMA", children: [
+        {name: " Unternehmensinfrastruktur", children:[
+          {name: "Autom. Datenbereitstellung", value: 1, itemStyle: item3},
+          {name: "Digitales Kanban-Board", value: 1, itemStyle: item2},
+          {name: "Social Intranet", value: 1, itemStyle: item1},
+          {name: "Tool-unterstützte Remote Teams", value: 1},
+          {name: "Tool-gestütztes Projektmanagement", value: 1},
+          {name: "Wissens-management-systeme", value: 1},
+          {name: "KI-gestützte Belegerkennung", value: 1},
+          {name: "Harmonisierte IT-Struktur", value: 1}
+        ]},
+        {name: "Personalmanagement", children:[
+          {name: "Betriebliches Gesundheits-management", value: 1},
+          {name: "Incentive-Programme", value: 1},
+          {name: "Experts on Demand", value: 1},
+          {name: "Befähigungs-programm für Betriebsräte", value: 1},
+          {name: "Konstruktive Fehlerkultur", value: 1},
+          {name: "Flexible Arbeitszeitmodelle", value: 1},
+          {name: "Schulungsplattform", value: 1},
+          {name: "Social Media Recruiting", value: 1},
+          {name: "Anpassung der Unternehmens-kultur", value: 1},
+          {name: "Change Management-Programme", value: 1},
+          {name: "Neue Führungs-modelle", value: 1},
+          {name: "Digitales Personal-management", value: 1},
+		  {name: "Webbasierte externe Lernangebote", value: 1},
+          {name: "Social Media Recruiting", value: 1}
+             ]},
+        {name:  "Forschung und Entwicklung", children:[
+          {name: "Design-Thinking-Ansätze", value: 1},
+          {name: "Tool-gestütztes Anforderungs-management", value: 1},
+          {name: "Technologie-foren", value: 1},
+          {name: "Tool-gestützte Großgruppen-Konzepte", value: 1},
+          {name: "Kunden-integrierter Entwicklungs-prozess", value: 1},
+          {name: "Kollaborative Produkt-entwicklung", value: 1},
+          {name: "Agile Teams", value: 1},
+          {name: "PLM-Systeme", value: 1}
+        ]},
+        {name:  "Beschaffung", children:[
+          {name: "E-Procurement", value: 1},
+          {name: "Prescriptive Analytics", value: 1},
+          {name: "Predictive Logistics", value: 1}
+      ]},
+        {name:  "Fertigung", children:[
+          {name: "Industrieroboter", value: 1},
+          {name: "Manufacturing Execution Systems", value: 1},
+          {name: "Betriebs- und Maschinendatenerfassung", value: 1},
+          {name: "Digitale Auftrags-überwachung", value: 1},
+          {name: "AR-basierte Montage-unterstützung", value: 1},
+          {name: "Montage-Assistenz-systeme", value: 1},
+          {name: "Autom. Qualitätsprüfung", value: 1},
+          {name: "Additive Fertigung", value: 1}
+      ]},
+        {name:  "Marketing & Vertrieb", children:[
+          {name: "Social Media Konzepte", value: 1},
+          {name: "Tool-gestützte Anforderungs-erhebung", value: 1},
+          {name: "Vertrieb von 3D-Konstruktions-dateien", value: 1},
+          {name: "Predictive Analytics", value: 1},
+          {name: "VR-unterstützter Vertrieb", value: 1},
+          {name: "Vertriebs-Dashboards", value: 1}
+        ]},
+        {name:  "Logistik", children:[
+          {name: "Cloudbasierter Datenaustausch", value: 1},
+          {name: "Fahrerlose Transportsysteme", value: 1},
+          {name: "Lagerverwaltungs-system", value: 1}
+        ]},
+        
+        {name:  "Service", children:[
+          {name: "Remote Assistance", value: 1},
+          {name: "Drohnen-basierte Überwachung", value: 1},
+          {name: "Smart Services für Anlagen", value: 1},
+          {name: "Predictive Maintenance", value: 1},
+          {name: "KI-basierte Voranalyse", value: 1}
+        ]},
+      ]}
+    ];
+
+    // create a chart and set the data
+    var chart = anychart.sunburst(data, "as-tree");
+  	chart.calculationMode("parent-independent");
+  
+  
+  var credits = chart.credits();
+  anychart.licenseKey("zshoket@campus.uni-paderborn.de-c3eb80d3-ac41041a");
+  credits.enabled(false);
+
+    // set the chart title
+    chart.title().useHtml(true);
+    chart.title("Projekt SORISMA identifizierten Industrie 4.0-Use Cases<br><br>" +
+                "<span style='font-size:12; font-style:italic'>" +
+                "myViewSystems</span>");
+
+
+  chart.labels().position("circular");
+  	
+    // set the container id
+    chart.container("container");
+
+    // initiate drawing the chart
+    chart.draw();
+
+chart.hovered().fill("#96a6a6", 0.4);
+chart.selected().fill("#96a6a6", 0.6);
+chart.selected().hatchFill("forward-diagonal", "#96a6a6", 0.5, 12);
+chart.normal().stroke("#96a6a6", 2);
+chart.hovered().stroke("#96a6a6", 2);
+chart.selected().stroke("#96a6a6", 4);
+
+});
+</script>
+</div>

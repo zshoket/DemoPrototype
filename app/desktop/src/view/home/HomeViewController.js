@@ -22,7 +22,6 @@ Ext.define('SORISMA.view.home.HomeViewController', {
 		var record = view.store.getAt(activeID);
 		if (record) {
 			var data = record.getData();
-			
 			var vm = me.getViewModel();
 			vm.set('home_id', data.id)
 			vm.set('home_name', data.name)
@@ -33,11 +32,25 @@ Ext.define('SORISMA.view.home.HomeViewController', {
 			vm.set('home_reifegrad', data.reifegrad)
 			vm.set('home_nutzenversprechen', data.nutzenversprechen)
 			vm.set('home_herausforderungen', data.herausforderungen)
-			vm.set('home_veränderungenMensch', data.veränderungenMensch)
-			vm.set('home_veränderungenOrganisation', data.veränderungenOrganisation)
-			vm.set('home_veränderungenTechnologie', data.veränderungenTechnologie)
+			vm.set('home_veraenderungenMensch', data.veraenderungenMensch)
+			vm.set('home_veraenderungenOrganisation', data.veraenderungenOrganisation)
+			vm.set('home_veraenderungenTechnologie', data.veraenderungenTechnologie)
 		}
+	},
+
+	dataToList: function() {
+		 
+	var names = 'home_veraenderungenTechnologie';
+    var nameArr = names.split(',');
+    console.log(nameArr);
+     
+    // Accessing individual values
+    document.write(nameArr[0] + "<br>"); // Prints: Harry
+    document.write(nameArr[1] + "<br>"); // Prints: John
+    document.write(nameArr[nameArr.length - 1] + "<br>"); // 
+
 	}
+
 });
 
 

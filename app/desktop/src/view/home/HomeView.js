@@ -38,7 +38,7 @@ Ext.define("SORISMA.view.home.HomeView", {
             width: 950,
 			margin: "0 10 0 0",
 			bind: {
-				html: '{home_name}'
+				html: '<p style="font-size:13px">{home_name}</p>'
             }
         },
         {
@@ -46,7 +46,7 @@ Ext.define("SORISMA.view.home.HomeView", {
             width: 175,
 			margin: "0 10 0 0",
 			bind: {
-                html: '<b>{home_dimension}</b>',
+                html: '<b style="font-size:13px">{home_dimension}</b>',
             }
         },
         {
@@ -128,11 +128,13 @@ Ext.define("SORISMA.view.home.HomeView", {
             ]
         },
         {
-            title: "Einordnung in die Wertschöpfungs-kette",
+            title: "Einordnung in die Wertschöpfungskette",
             width: 847,
+            height: 170,
             bind: {
-                html: '<ul><li>Unternehmensinfrastruktur</li><li>Personalmanagement</li><li>Forschung und Entwicklung</li><li>Beschaffung</li><li>Fertigung</li><li>Marketing & Vertrieb</li><li>Logistik</li><li>Service</li></ul>'
-                //{home_einordnungKette}
+                html: 
+                //'<ul><li>Unternehmensinfrastruktur</li><li>Personalmanagement</li><li>Forschung und Entwicklung</li><li>Beschaffung</li><li>Fertigung</li><li>Marketing & Vertrieb</li><li>Logistik</li><li>Service</li></ul>'
+                '<ul><li>{home_einordnungKette}</li></ul>'
             },
         },
         {
@@ -141,7 +143,7 @@ Ext.define("SORISMA.view.home.HomeView", {
             height: 160,
             margin: "0 10 0 0",
             bind: {
-				html: '{home_nutzenversprechen}'
+				html: '<ul><li>{home_nutzenversprechen}</li></ul>'
 			},
         },
         {
@@ -159,7 +161,7 @@ Ext.define("SORISMA.view.home.HomeView", {
             height: 160,
             margin: "0 10 0 0",
             bind: {
-				html: '{home_veränderungenMensch}'
+				html: '{home_veraenderungenMensch}'
 			},
         },
         {
@@ -168,7 +170,7 @@ Ext.define("SORISMA.view.home.HomeView", {
             height: 160,
             margin: "0 10 0 0",
             bind: {
-				html: '{home_veränderungenOrganisation}'
+				html: '{home_veraenderungenOrganisation}'
 			},
         },
         {
@@ -177,7 +179,10 @@ Ext.define("SORISMA.view.home.HomeView", {
             height: 160,
             margin: "0 10 0 0",
             bind: {
-				html: '{home_veränderungenTechnologie}'
+                html:
+                '{home_veraenderungenTechnologie}'
+                //'<script String numbersArray = "{home_veraenderungenTechnologie}"; List<String> numbers = Arrays.asList(numbersArray.split(",")); >'
+                //'<body><script>String a = "{home_veraenderungenTechnologie}";String b = a.split(",");console.log(b);String[] myString = Arrays.asList(b);</script></body>'
 			},
         }
     ]

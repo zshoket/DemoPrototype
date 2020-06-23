@@ -11,8 +11,8 @@ Ext.define("SORISMA.model.Usecase", {
         { name: "reifegrad", type: "auto" },
         { name: "nutzenversprechen", type: "auto" },
         { name: "herausforderungen", type: "auto" },
-        { name: "veränderungenMensch", type: "auto" },
-        { name: "veränderungenOrganisation", type: "auto" },
-        { name: "veränderungenTechnologie", type: "auto" }
+        { name: "veraenderungenMensch", type: "auto" },
+        { name: "veraenderungenOrganisation", type: "auto" },
+        { name: "veraenderungenTechnologie", type: "auto" }
     ]
 });

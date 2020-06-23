@@ -39,9 +39,15 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         leaf: true
                     },
                     {
-                        text: "Personnel",
+                        text: "UseCases GridView",
                         iconCls: "x-fa fa-table",
                         xtype: "personnelview",
+                        leaf: true
+                    },
+                    {
+                        text: "Sunburst Diagram",
+                        iconCls: "x-fa fa-list",
+                        xtype: "d3Sunburst",
                         leaf: true
                     }
                     //add new items on the next line (from sencha-node generate viewpackage)
