@@ -35,7 +35,8 @@ Ext.define("SORISMA.view.home.HomeView", {
         }, */
         {
             title: "Name",
-            width: 950,
+            width: '950',
+            flex: 1,
 			margin: "0 10 0 0",
 			bind: {
 				html: '<p style="font-size:13px">{home_name}</p>'
@@ -43,7 +44,8 @@ Ext.define("SORISMA.view.home.HomeView", {
         },
         {
             title: "Dimension",
-            width: 175,
+            width: '175',
+            flex: 1,
 			margin: "0 10 0 0",
 			bind: {
                 html: '<b style="font-size:13px">{home_dimension}</b>',

@@ -46,7 +46,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                     },
                     {
                         text: "Sunburst Diagram",
-                        iconCls: "x-fa fa-list",
+                        iconCls: "x-fa fa-crosshairs",
                         xtype: "d3Sunburst",
                         leaf: true
                     }
