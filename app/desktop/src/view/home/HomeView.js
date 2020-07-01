@@ -65,7 +65,8 @@ Ext.define("SORISMA.view.home.HomeView", {
             height: 170,
             margin: "0 5 0 0",
               bind: {
-                 html: '<img src="{home_unternehmen}" alt="mit" width="250" height="150">'
+                 html: '<b style="font-size:13px">{home_unternehmen}</b>',
+                 //'<img src="{home_unternehmen}" width="250" height="150">'
              }
          },
         {

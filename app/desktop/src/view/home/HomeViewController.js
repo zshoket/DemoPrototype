@@ -25,7 +25,7 @@ Ext.define('SORISMA.view.home.HomeViewController', {
 			var vm = me.getViewModel();
 			vm.set('home_id', data.id)
 			vm.set('home_name', data.name)
-			vm.set('home_unternehmen', data.unternehmen)
+			vm.set('home_unternehmen', data.unternehmen_id)
 			vm.set('home_dimension', data.dimension)
 			vm.set('home_einordnungKette', data.einordnungKette)
 			vm.set('home_kurzbeschreibung', data.kurzbeschreibung)

@@ -17,35 +17,6 @@ Ext.define('SORISMA.view.d3.Sunburst',{
 
     defaultType: "panel",
     
-    html: '<iframe src="html/sunburst.html" scrolling="no" height="1100" width="100%"></iframe>',
-    /* items: [{
-        xtype: 'box',
-        autoEl: {
-            tag: 'iframe',
-            src: 'html\sunburst.html',
-        },  
-    
-    /* config: {
-        id: 'MyPanel',
-        itemId: 'MyPanel',
-        scrollable: true,
-        listeners: [
-            {
-                fn: 'onMyPanelActivate',
-                event: 'activate'
-            }
-        ]
-    },    onMyPanelActivate: function(newActiveItem, container, oldActiveItem, eOpts) {
-        Ext.Ajax.request({
-            url: 'html\sunburst.html',
-            success : function(response) {
-               Ext.getCmp('MyPanel').setHtml(response.responseText);
-            },
-            failure : function(response) {  
-                var text = response.responseText;
-                Ext.Msg.alert('Error', text, Ext.emptyFn);            }
-        });
-    } 
-    }] */
- 
+    html: '<iframe src="html/sunburst2.html" scrolling="no" height="1100" width="100%"></iframe>',
+
 });

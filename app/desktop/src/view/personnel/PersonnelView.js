@@ -28,7 +28,7 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
         },
         {
             text: 'Unternehmen',
-            dataIndex: 'unternehmen',
+            dataIndex: 'unternehmen_id',
             editable: true,
             width: 230
         },
@@ -57,19 +57,19 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
             width: 230
         },
         {
-            text: 'veraenderungen Mensch',
+            text: 'Veränderungen Mensch',
             dataIndex: 'veraenderungenMensch',
             editable: false,
             width: 230
         },
         {
-            text: 'veraenderungen Organisation',
+            text: 'Veränderungen Organisation',
             dataIndex: 'veraenderungenOrganisation',
             editable: false,
             width: 230
         },
         {
-            text: 'veraenderungen Technologie',
+            text: 'Veränderungen Technologie',
             dataIndex: 'veraenderungenTechnologie',
             editable: false,
             width: 230

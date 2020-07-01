@@ -6,8 +6,8 @@ Ext.define('SORISMA.store.HomeViewStore', {
     proxy: {
         type: "ajax", 
         
-       // url: "http://localhost:3002/getAll",
-        url: "http://localhost:3001/api/documents",
+        url: "http://localhost:3002/getAll",
+       // url: "http://localhost:3001/api/documents",
         reader: {
             type: 'json',
             rootProperty: 'items'
