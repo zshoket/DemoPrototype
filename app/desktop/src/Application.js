@@ -2,7 +2,7 @@ Ext.define('SORISMA.Application', {
 	extend: 'Ext.app.Application',
 	name: 'SORISMA',
 	requires: ['SORISMA.*'],
-	defaultToken: 'homeview',
+	defaultToken: 'd3Sunburst',
 
 	removeSplash: function () {
 		Ext.getBody().removeCls('launching')

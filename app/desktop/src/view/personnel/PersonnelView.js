@@ -13,6 +13,7 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
         }
     },
     columns: [
+        {xtype: 'rownumberer'},
         {
             text: 'Name',
             dataIndex: 'name',
@@ -73,7 +74,7 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
             dataIndex: 'veraenderungenTechnologie',
             editable: false,
             width: 230
-        }        
+        }   
     ],
     listeners: {
         select: 'onItemSelected'

@@ -33,6 +33,12 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                 expanded: true,
                 children: [
                     {
+                        text: "SORISMA Use-Case GraphView",
+                        iconCls: "x-fa fa-crosshairs",
+                        xtype: "d3Sunburst",
+                        leaf: true
+                    },
+                    {
                         text: "Use Case Documents",
                         iconCls: "x-fa fa-home",
                         xtype: "homeview",
@@ -43,14 +49,9 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         iconCls: "x-fa fa-table",
                         xtype: "personnelview",
                         leaf: true
-                    },
-                    {
-                        text: "Sunburst Diagram",
-                        iconCls: "x-fa fa-crosshairs",
-                        xtype: "d3Sunburst",
-                        leaf: true
                     }
-                    //add new items on the next line (from sencha-node generate viewpackage)
+                    
+                    
                 ]
             }
         }
