@@ -36,7 +36,7 @@ module.exports = async function (env) {
   
   if (environment === 'production') { isProd = true; }
   
-  portfinder.basePort = (env && env.port) || 80
+  portfinder.basePort = (env && env.port) || 1962
   return portfinder.getPortPromise().then(port => {
     const plugins = [
       new HtmlWebpackPlugin({ template: "index.html", hash: true, inject: "body" }),
