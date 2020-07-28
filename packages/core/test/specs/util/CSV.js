@@ -111,7 +111,7 @@ topSuite("Ext.util.CSV", function() {
         });
 
         it("should work when the first value is empty", function() {
-            var test = ',F,,O,,O,';
+            var test = ',F,O,O,';
 
             expect(CSV.decode(test)).toEqual([
                 ['', 'F', '', 'O', '', 'O', '']
@@ -119,8 +119,8 @@ topSuite("Ext.util.CSV", function() {
         });
 
         it("should not create an empty row when a line feed is the last character in the input", function() {
-            var test1 = 'John,Doe,42' + CSV.lineBreak + 'Jane,Henry,31' + CSV.lineBreak + ',,\r\n',
-                test2 = 'John,Doe,42' + CSV.lineBreak + ',,' + CSV.lineBreak + 'Jane,Henry,31\n',
+            var test1 = 'John,Doe,42' + CSV.lineBreak + 'Jane,Henry,31' + CSV.lineBreak + ',\r\n',
+                test2 = 'John,Doe,42' + CSV.lineBreak + ',' + CSV.lineBreak + 'Jane,Henry,31\n',
                 test3 = 'John,Doe,42\r';
 
             // two rows of data, one empty row with \r\n end variant

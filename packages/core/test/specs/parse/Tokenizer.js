@@ -594,7 +594,7 @@ topSuite('Ext.parse.Tokenizer', function() {
         });
 
         it('should be able to parse comma', function() {
-            tokenizer.reset(',,');
+            tokenizer.reset(',');
 
             var t0 = tokenizer.next();
 

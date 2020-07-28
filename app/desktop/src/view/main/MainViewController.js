@@ -99,6 +99,8 @@ Ext.define("SORISMA.view.main.MainViewController", {
         Ext.Viewport.add([{ xtype: "loginview" }]);
     }
 
+    
+
     //	onActionsViewLogoutTap: function( ) {
     //		var vm = this.getViewModel();
     //		vm.set('firstname', '');

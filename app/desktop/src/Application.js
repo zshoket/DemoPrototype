@@ -24,5 +24,7 @@ Ext.define('SORISMA.Application', {
 				}
 			}
 		);
-	}
+	},
+
+	
 });
