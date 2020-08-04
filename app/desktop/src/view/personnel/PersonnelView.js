@@ -84,35 +84,9 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
 
         listeners: {
             
-            // itemclick: function(dv, record, item, index, e) {
-            //     alert(record.get('name'));
-            // }
-
-            // itemclick: function(this, record, element, rowIndex, e, eOpts) {
-            //     var selectedRec = this.getSelectionModel().getSelected();          
-            //     alert(selectedRec.get('name'));
-            // }
-
-            // select: function(selModel, record, index, options){
-            //     alert(index);
-            // }
+            select: 'onItemSelected'
             
-            // cellclick: function (view, cell, cellIndex, record, row, rowIndex, e) {
+                }
     
-            //     var linkClicked = (e.target.tagName == 'A');
-            //     var clickedDataIndex =
-            //         view.panel.headerCt.getHeaderAtIndex(cellIndex).dataIndex;
-    
-            //     if (linkClicked && clickedDataIndex == '...') {
-            //         alert(record.get('id'));
-            //     }
-            
-            select : function(grid,rowIndex,e) {
-                var record = grid.getStore().getAt(rowIndex);
-                var id = record.get('ID');
-                var url = 'http://localhost:1962/#homeview/='+id;
-                window.location = url;
-           }
-    }
 
 });

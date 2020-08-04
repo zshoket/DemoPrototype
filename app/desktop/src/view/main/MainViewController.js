@@ -30,7 +30,7 @@ Ext.define("SORISMA.view.main.MainViewController", {
             var homeController = homeview.getController();
             homeController.reloadData();
         }
-    },
+    }, 
 
     mainRoute: function(xtype) {
         //var menuview = this.lookup('menuview');
@@ -65,7 +65,7 @@ Ext.define("SORISMA.view.main.MainViewController", {
         menuview.setSelection(node);
         var vm = this.getViewModel();
         vm.set("heading", node.get("text"));
-    },
+    }, 
 
     onMenuViewSelectionChange: function(tree, node) {
         if (node == null) {

@@ -4,7 +4,7 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
 
     // # This Block is for Navigating in One View to Another with a Button Click # \\
     // It is Not Being Used Here for Now
-    action: "changeView",
+    /* action: "changeView",
     refs: {
         HomeView: {
             autoCreate: true,
@@ -23,11 +23,27 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
 
         changeView: function(){
             this.redirectTo('homeview');
-             },
-    // # End Of Block # \\
+             }, */
 
-    // onEditCancelled: function (editor, value, startValue, eOpts) {
-    //     var user = Ext._find(value.record.store.config.data.items, { name: value.record.data.name });
-    //     Ext.Msg.confirm('Confirm', value.record.data.name + ': ' + user.phone + ' is phone number', 'onConfirm', this);
-    // }
+             refs: {
+                HomeView: {
+                    autoCreate: true,
+                    selector: '#homeview',
+                    xtype: 'homeview',
+                },
+            
+            },
+             
+        onItemSelected: function(grid,records,e) {
+
+            debugger
+            var record = records[0];
+            var id = record.get('id');
+            var url = 'http://51.15.76.202:3001/api/documents/'+id;
+            //var url =  'http://localhost:1962/#homeview/12';
+            window.location = url;
+        }
+
+
+ 
 });
