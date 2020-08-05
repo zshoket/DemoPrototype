@@ -9,13 +9,12 @@ Ext.define('SORISMA.view.home.HomeViewController', {
 	},
 
 	/**
-	 * Setzt die Daten des Eintrags in die ViewModel Variablen.
-	 * Greift auf die `main_activeID` Variable aus dem mainViewModel 
-	 * zu.
+	 * Sets the data of the entry in the ViewModel variables.
+	 * Accesses the 'main_activeID' variable from the mainViewModel  
 	 */
 	reloadData: function() {
 		var me = this;
-		
+		debugger
 		var view = me.getView();
 		var mainVM = Ext.getCmp('mainview').getViewModel();
 		var activeID = mainVM.get('main_activeID');
@@ -38,18 +37,13 @@ Ext.define('SORISMA.view.home.HomeViewController', {
 		}
 	},
 
-	dataToList: function() {
+	// dataToList: function() {
 		 
-	var names = 'home_veraenderungenTechnologie';
-    var nameArr = names.split(',');
-    console.log(nameArr);
+	// var names = 'home_veraenderungenTechnologie';
+    // var nameArr = names.split(',');
+    // console.log(nameArr);
      
-    // Accessing individual values
-    document.write(nameArr[0] + "<br>"); // Prints: Harry
-    document.write(nameArr[1] + "<br>"); // Prints: John
-    document.write(nameArr[nameArr.length - 1] + "<br>"); // 
-
-	}
+	// }
 
 });
 

@@ -12,10 +12,8 @@ Ext.define("SORISMA.view.main.MainViewModel", {
         headerview_height: 50,
         footerview_height: 50,
         detailCollapsed: true,
-        main_activeID: 0 // ID des grade aktiven Eintrags
-        /* detailview_width:      10,
-		detailview_max_width: 300,
-		detailview_min_width:   0, */
+        main_activeID: 0 // ID of the currently active entry
+        
     },
     formulas: {
         navview_width: function(get) {

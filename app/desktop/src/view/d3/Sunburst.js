@@ -19,10 +19,10 @@ Ext.define('SORISMA.view.d3.Sunburst',{
 
     defaultType: "panel",
     
-    html: '<iframe src="html/homeTest.html" scrolling="no" height="1100" width="100%"></iframe>',
+    html: '<iframe src="html/homeTest.html" scrolling="no" height="900" width="100%"></iframe>',
     
  
-    items: [{
+   /*  items: [{
         title: 'DetailView',
         docked : 'right',
         collapsible: true,
@@ -35,6 +35,6 @@ Ext.define('SORISMA.view.d3.Sunburst',{
             iconCls: "x-fa fa-database",
             action:  'changeView'
         }] 
-    }]
+    }] */
 
 });
