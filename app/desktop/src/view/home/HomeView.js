@@ -35,8 +35,10 @@ Ext.define("SORISMA.view.home.HomeView", {
         }, */
         {
             title: "Name",
-            width: '950',
+            //width: '950',
+            width: '80%',
             flex: 1,
+            split: true,
 			margin: "0 10 0 0",
 			bind: {
 				html: '<p style="font-size:13px">{home_name}</p>'
@@ -44,7 +46,9 @@ Ext.define("SORISMA.view.home.HomeView", {
         },
         {
             title: "Dimension",
-            width: '175',
+            width: '18%',
+            height: 100,
+            split: true,
             flex: 1,
 			margin: "0 10 0 0",
 			bind: {
@@ -53,13 +57,15 @@ Ext.define("SORISMA.view.home.HomeView", {
         },
         {
             title: "Kurzbeschreibung",
-            width: 850,
-			margin: "0 10 0 0",
+            width: '98.7%',
+            height: 170,
+            margin: "0 10 0 0",
+            split: true,
 			bind: {
                 html: '{home_kurzbeschreibung}',
             }
         },
-        {
+       /*  {
             title: "Unternehmen",
             width: 280,
             height: 170,
@@ -69,12 +75,13 @@ Ext.define("SORISMA.view.home.HomeView", {
                  //'<b style="font-size:13px">{home_unternehmen}</b>',
                  '<img src="{home_unternehmen}" width="250" height="150">'
              }
-         },
+         }, */
         {
             title: "Reifegrad",
-            width: 290,
-            height: 170,
+            width: '19%',
+            height: 120,
             margin: "0 5 0 0",
+            split: true,
             items: [
                 {
                     xtype: "checkboxgroup",
@@ -133,8 +140,9 @@ Ext.define("SORISMA.view.home.HomeView", {
         },
         {
             title: "Einordnung in die Wertschöpfungskette",
-            width: 847,
+            width: '79.5%',
             height: 170,
+            split: true,
             bind: {
                 html: 
                 //'<ul><li>Unternehmensinfrastruktur</li><li>Personalmanagement</li><li>Forschung und Entwicklung</li><li>Beschaffung</li><li>Fertigung</li><li>Marketing & Vertrieb</li><li>Logistik</li><li>Service</li></ul>'
@@ -143,8 +151,9 @@ Ext.define("SORISMA.view.home.HomeView", {
         },
         {
             title: "Nutzenversprechen",
-            width: 560,
+            width: '49%',
             height: 160,
+            split: true,
             margin: "0 10 0 0",
             bind: {
 				html: '<ul><li>{home_nutzenversprechen}</li></ul>'
@@ -152,8 +161,9 @@ Ext.define("SORISMA.view.home.HomeView", {
         },
         {
             title: "Herausforderungen",
-            width: 571,
+            width: '49.2%',
             height: 160,
+            split: true,
             margin: "0 10 0 0",
             bind: {
 				html: '{home_herausforderungen}'
@@ -161,8 +171,9 @@ Ext.define("SORISMA.view.home.HomeView", {
         },
         {
             title: "Veränderungen Mensch",
-            width: 390,
+            width: '32%',
             height: 160,
+            split: true,
             margin: "0 10 0 0",
             bind: {
 				html: '{home_veraenderungenMensch}'
@@ -170,8 +181,9 @@ Ext.define("SORISMA.view.home.HomeView", {
         },
         {
             title: "Veränderungen Organisation",
-            width: 350,
+            width: '33%',
             height: 160,
+            split: true,
             margin: "0 10 0 0",
             bind: {
 				html: '{home_veraenderungenOrganisation}'
@@ -179,7 +191,8 @@ Ext.define("SORISMA.view.home.HomeView", {
         },
         {
             title: "Veränderungen Technologie",
-            width: 380,
+            width: '32.7%',
+            split: true,
             height: 160,
             margin: "0 10 0 0",
             bind: {
