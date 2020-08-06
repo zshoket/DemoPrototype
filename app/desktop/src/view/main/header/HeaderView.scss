@@ -1,13 +1,14 @@
 .headerview {
 	border-left: 0;
 	border-top: 0;
-	color: $base-foreground-color;
-	background-color: $base-color;
+	color: #404040;
+	background-color: #404040;
 }
 
 .headerviewtext { 
 	font-size: 28px; 
 	padding: 0 0 0 15px;
+	color: white;
 	line-height: 50px;
 }
 

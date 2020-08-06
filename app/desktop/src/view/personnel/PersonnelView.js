@@ -17,11 +17,7 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
         {
             text: 'Name',
             dataIndex: 'name',
-            editable: false,
-            // renderer: function (rowIndex) {
-            //     return '<a href="#">'+rowIndex+'</a>';
-            // },
-            
+            editable: false, 
             width: 250,
             cell: {userCls: 'bold'},
             
@@ -32,12 +28,12 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
             editable: false,
             width: 150
         },
-        {
+       /*  {
             text: 'Unternehmen',
             dataIndex: 'unternehmen_id',
             editable: false,
             width: 230
-        },
+        }, */
         {
             text: 'Einordnung in die Wertschöpfungs-kette',
             dataIndex: 'einordnungKette',
