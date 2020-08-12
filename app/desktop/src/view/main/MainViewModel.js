@@ -32,19 +32,19 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                 expanded: true,
                 children: [
                     {
-                        text: "SORISMA Use-Case GraphView",
+                        text: "Radar Chart",
                         iconCls: "x-fa fa-crosshairs",
                         xtype: "d3Sunburst",
                         leaf: true
                     },
                     {
-                        text: "Use Case Documents",
+                        text: "Steckbriefe",
                         iconCls: "x-fa fa-home",
                         xtype: "homeview",
                         leaf: true
                     },
                     {
-                        text: "UseCases GridView",
+                        text: "Listenansicht",
                         iconCls: "x-fa fa-table",
                         xtype: "personnelview",
                         leaf: true
