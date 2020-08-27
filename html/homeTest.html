@@ -6,12 +6,26 @@
 <div id="ac_style_samples-bct-sunburst-chart-01" style="display:none;">
   html, body, iFrame, #container {
     width: 250%;
-    height: 170%;
+    height: 160%;
     margin: 0;
     padding: 0;
 }
-
 </div>
+<style>
+
+  .outer2{
+    position: fixed;
+    right: 80px;
+    top: 120px;
+    width: 14%;
+  }
+  
+  .outer{
+    position: fixed;
+    right: 80px;
+    top: 10px;
+  }
+    </style>
 <script>(function(){
 function ac_add_to_head(el){
 	var head = document.getElementsByTagName('head')[0];
@@ -32,11 +46,10 @@ ac_add_link('https://cdn.anychart.com/releases/8.7.1/css/anychart-ui.min.css?hco
 ac_add_style(document.getElementById("ac_style_samples-bct-sunburst-chart-01").innerHTML);
 ac_add_style(".anychart-embed-samples-bct-sunburst-chart-01{width:600px;height:450px;}");
 })();</script>
-<button onclick="drillUpALevel()">Drill Up 1 Level</button>
+<button onclick="drillUpALevel()">Startansicht</button>
 <div id="container"></div>
-<img src="/uploads/legends.png" alt="chartLegend" height="95"></img>
-<img src="/uploads/legends2.png" alt="chartLegend2" height="95"></img>
-
+<img src="/uploads/legends.png" alt="chartLegend" height="100" class="outer2"></img>
+<img src="/uploads/legends2.png" alt="chartLegend2" height="110" class="outer"></img>
 <script>
 anychart.onDocumentReady(function () {
 
@@ -119,7 +132,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "16",
     "id": "12",
-    "name": "Digitales Kanban-Board",
+    "name": "Digitales Kanbanboard",
   fill: '#aeccd9',
     "value": 35,
   stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
@@ -144,7 +157,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "16",
     "id": "15",
-    "name": "Tool-unterstützte Remote Teams",
+    "name": "Tool unterstützte Remote Teams",
     "value": 35,
 	url: "http://localhost:1962/#homeview/1",
   stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
@@ -155,7 +168,7 @@ anychart.onDocumentReady(function () {
 },  {
     "parent": "17",
     "id": "16",
-    "name": "Wissens-management-systeme",
+    "name": "Wissensmanagementsysteme",
     "value": 35,
   fill: '#7cbb82',
   url: "http://localhost:1962/#homeview/4",
@@ -171,7 +184,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "01",
     "id": "18",
-    "name": "Harmonisierte IT-Struktur",
+    "name": "Harmonisierte IT Struktur",
     "value": 250,
 	url: "http://localhost:1962/#homeview/7",
   fill: '#aeccd9',
@@ -198,7 +211,7 @@ anychart.onDocumentReady(function () {
 {
     "parent": "29",
     "id": "19",
-    "name": "Betriebliches Gesundheits-management",
+    "name": "Betriebliches Gesundheitsmanagement",
     "value": 41,
 	url: "http://localhost:1962/#homeview/13",
   stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
@@ -209,7 +222,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "30",
     "id": "20",
-    "name": "Incentive-Programme",
+    "name": "IncentiveProgramme",
     "value": 41,
   fill: '#f8f8a2',
   url: "http://localhost:1962/#homeview/20",
@@ -220,7 +233,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "27",
     "id": "22",
-    "name": "Befähigungs-programm für Betriebsräte",
+    "name": "Befähigungsprogramm für Betriebsräte",
     "value": 41,
 	url: "http://localhost:1962/#homeview/18",
   stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
@@ -275,7 +288,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "33",
     "id": "27",
-    "name": "Anpassung der Unternehmens-kultur",
+    "name": "Anpassung der Unternehmenskultur",
     "value": 41,
 	url: "http://localhost:1962/#homeview/16",
   stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
@@ -297,7 +310,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "33",
     "id": "29",
-    "name": "Neue Führungs-modelle",
+    "name": "Neue Führungsmodelle",
     "value": 41,
 	url: "http://localhost:1962/#homeview/17",
   stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
@@ -305,7 +318,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "33",
     "id": "30",
-    "name": "Digitales Personal-management",
+    "name": "Digitales Personalmanagement",
     "value": 41,
 	url: "http://localhost:1962/#homeview/21",
   stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
@@ -327,7 +340,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "33",
     "id": "32",
-    "name": "Change Management-Programme",
+    "name": "Change Management Programme",
     "value": 41,
 	url: "http://localhost:1962/#homeview/11",
   stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
@@ -360,7 +373,7 @@ anychart.onDocumentReady(function () {
 {
     "parent": "44",
     "id": "43",
-    "name": "Design-Thinking-Ansätze", "value": 41,
+    "name": "Design Thinking Ansätze", "value": 41,
   fill: '#7cbb82',
   url: "http://localhost:1962/#homeview/26",
   stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
@@ -368,7 +381,7 @@ anychart.onDocumentReady(function () {
 {
     "parent": "43",
     "id": "37",
-    "name": "Tool-gestütztes Anforderungs-management",
+    "name": "Tool gestütztes Anforderungsmanagement",
     "value": 41,
   fill: '#7cbb82',
   url: "http://localhost:1962/#homeview/24",
@@ -376,7 +389,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "41",
     "id": "38",
-    "name": "Technologie-foren",
+    "name": "Technologieforen",
     "value": 41,
   fill: '#7cbb82',
   url: "http://localhost:1962/#homeview/25",
@@ -384,7 +397,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "42",
     "id": "39",
-    "name": "Tool-gestützte Großgruppen-Konzepte",
+    "name": "Tool gestützte Großgruppen Konzepte",
     "value": 41,
   fill: '#7cbb82',
   url: "http://localhost:1962/#homeview/27",
@@ -392,7 +405,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "44",
     "id": "40",
-    "name": "Kunden-integrierter Entwicklungs-prozess",
+    "name": "Kundenintegrierter Entwicklungsprozess",
     "value": 41,
 	url: "http://localhost:1962/#homeview/22",
   stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
@@ -400,7 +413,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "44",
     "id": "41",
-    "name": "Kollaborative Produkt-entwicklung",
+    "name": "Kollaborative Produktentwicklung",
     "value": 41,
   fill: '#aeccd9',
   url: "http://localhost:1962/#homeview/31",
@@ -416,7 +429,7 @@ anychart.onDocumentReady(function () {
 }, {
     "parent": "44",
     "id": "46",
-    "name": "PLM-Systeme",
+    "name": "PLM Systeme",
     "value": 41,
 	url: "http://localhost:1962/#homeview/27",
   stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
@@ -515,7 +528,7 @@ stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
 }, {
     "parent": "58",
     "id": "57",
-    "name": "Betriebs- und Maschinendatenerfassung",
+    "name": "Betriebs und Maschinendatenerfassung",
     "value": 41,
 	url: "http://localhost:1962/#homeview/34",
   fill: '#aeccd9',
@@ -524,7 +537,7 @@ stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
 }, {
     "parent": "62",
     "id": "58",
-    "name": "Digitale Auftrags-überwachung",
+    "name": "Digitale Auftragsüberwachung",
     "value": 41,
   fill: '#aeccd9',
   url: "http://localhost:1962/#homeview/35",
@@ -532,7 +545,7 @@ stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
 }, {
     "parent": "62",
     "id": "59",
-    "name": "AR-basierte Montage-unterstützung",
+    "name": "AR-basierte Montageunterstützung",
     "value": 41,
 	url: "http://localhost:1962/#homeview/36",
   fill: '#aeccd9',
@@ -540,7 +553,7 @@ stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
 }, {
     "parent": "62",
     "id": "60",
-    "name": "Montage-Assistenz-systeme",
+    "name": "Montage Assistenzsysteme",
     "value": 41,
   fill: '#aeccd9',
   url: "http://localhost:1962/#homeview/39",
@@ -599,7 +612,7 @@ url: ""
 }, {
     "parent": "64",
     "id": "66",
-    "name": "Tool-gestützte Anforderungs-erhebung",
+    "name": "Tool-gestützte Anforderungserhebung",
     "value": 41,
   fill: "#7cbb82",
   url: "http://localhost:1962/#homeview/41",
@@ -609,7 +622,7 @@ url: ""
 }, {
     "parent": "64",
     "id": "67",
-    "name": "Vertrieb von 3D-Konstruktions-dateien",
+    "name": "Vertrieb von 3D-Konstruktionsdateien",
     "value": 41,
   fill: "#7cbb82",
   url: "http://localhost:1962/#homeview/46",
@@ -637,7 +650,7 @@ url: ""
 }, {
     "parent": "66",
     "id": "70",
-    "name": "Vertriebs-Dashboards",
+    "name": "Vertriebs Dashboards",
 	url: "http://localhost:1962/#homeview/44",
     "value": 41,
    fill: '#aeccd9',
@@ -672,7 +685,7 @@ url: ""
 }, {
     "parent": "73",
     "id": "74",
-    "name": "Lagerverwaltungs-system",
+    "name": "Lagerverwaltungssystem",
     "value": 41,
   fill: '#aeccd9',
   url: "http://localhost:1962/#homeview/48",
@@ -708,7 +721,7 @@ fill: '#aeccd9',
 }, {
     "parent": "76",
     "id": "78",
-    "name": "Drohnen-basierte Überwachung",
+    "name": "Drohnenbasierte Überwachung",
     "value": 41,
 	url: "http://localhost:1962/#homeview/56",
   stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
@@ -770,8 +783,7 @@ fill: '#aeccd9',
 	chart.drillUp();	
 	chart.interactivity().selectionMode("single-select");
 	}else {
-		chart.drillTo(item);
-	//chart.drillUp();	
+		chart.drillTo(item);	
 	chart.interactivity().selectionMode("none");
 	}
     });
@@ -783,8 +795,7 @@ fill: '#aeccd9',
 }else{
    //window.open(new_value,"_blank");
    top.location.href = new_value;
-}
-    
+}    
     });
                 
   chart.labels().position("circular");
@@ -812,12 +823,10 @@ chart.normal().stroke("#96a6a6", 2);
 chart.hovered().stroke("#96a6a6", 2);
 chart.selected().stroke("#96a6a6", 4);
 
-
-});
-
 function drillUpALevel() {
    chart.drillUp();
    chart.interactivity().selectionMode("drill-down");
 }
+});
 </script>
 </div>
