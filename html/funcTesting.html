@@ -214,7 +214,7 @@
       "id": "19",
       "name": "Betriebliches Gesundheitsmanagement",
       "value": 41,
-    url: "http://localhost:1962/#homeview/13",
+    url: "http://localhost:1962/#homeview/11",
     stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
     fill: '#f8f8a2',
     label: {
@@ -313,7 +313,7 @@
       "id": "29",
       "name": "Neue Führungsmodelle",
       "value": 41,
-    url: "http://localhost:1962/#homeview/17",
+    url: "http://localhost:1962/#homeview/15",
     stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
     fill: '#7cbb82',
   }, {
@@ -333,7 +333,7 @@
       "name": "Webbasierte externe Lernangebote",
       "value": 41,
     fill: '#f8f8a2',
-    url: "http://localhost:1962/#homeview/15",
+    url: "http://localhost:1962/#homeview/13",
     stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
     label: {
            fontColor: 'black',
@@ -343,7 +343,7 @@
       "id": "32",
       "name": "Change Management Programme",
       "value": 41,
-    url: "http://localhost:1962/#homeview/11",
+    url: "http://localhost:1962/#homeview/9",
     stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
     fill: '#f8f8a2',
     label: {
@@ -471,6 +471,7 @@
       "id": "50",
       "name": "Prescriptive Analytics", "value": 41,
               fill: '#aeccd9',
+              url: "http://localhost:1962/#homeview/31",
     stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
             },
         {
@@ -715,7 +716,7 @@
       "id": "77",
       "name": "KI-basierte Voranalyse",
       "value": 10,
-    url: "http://localhost:1962/#homeview/54",
+    url: "http://localhost:1962/#homeview/52",
     stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'},
   fill: '#aeccd9',
   
@@ -733,7 +734,7 @@
       "id": "79",
       "name": "Smart Services für Anlagen",
       "value": 41,
-    url: "http://localhost:1962/#homeview/52",
+    url: "http://localhost:1962/#homeview/50",
     stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
   fill: '#aeccd9',
   
@@ -776,19 +777,65 @@
   
       });
     
+      chart.interactivity().selectionMode("single-select");
+
+      
+
+    //    chart.contextMenu(false);
+
+    //   var customContextMenu = anychart.ui.contextMenu();
+
+    // customContextMenu.attach(chart);
+
+    // // Set items.
+    // customContextMenu.items([
+    //     {
+    //         text: 'Open AnyChart API',
+    //         href: 'https://api.anychart.com'
+    //     }, {
+    //         text: 'Support',
+    //         href: 'https://www.anychart.com/support/'
+    //     }
+    // ]);
+
+      chart.contextMenu().itemsFormatter(function(items){
+      // Disable save as image option
+     delete items["save-chart-as"];
+    delete items["save-data-as"];
+    delete items["share-with"];
+      // delete about and separator 
+     //delete items["full-screen-separator"];
+     delete items["about"];
     
-    chart.listen("pointClick", function(e){
-  
-  var item = e.point.get("name");
-    if(item == parent) {
-    chart.drillUp();	
-    chart.interactivity().selectionMode("single-select");
-    }else {
-      chart.drillTo(item);
-    //chart.drillUp();	
-    chart.interactivity().selectionMode("none");
-    }
+     
+     items["print-chart"].action = function(e) {
+     // alert('Custom action');
+      var new_value = e.point.get("url");
+    if(new_value == ""){
+      //do nothing   
+  }else{
+     //window.open(new_value,"_blank");
+     top.location.href = new_value;
+  }
+    };
+
+
+    // return modified array
+    return items;
   });
+    
+  //   chart.listen("pointClick", function(e){
+  
+  // var item = e.point.get("name");
+  //   if(item == parent) {
+  //   chart.drillUp();	
+  //   chart.interactivity().selectionMode("single-select");
+  //   }else {
+  //     chart.drillTo(item);
+  //   //chart.drillUp();	
+  //   chart.interactivity().selectionMode("none");
+  //   }
+  // });
   
     chart.listen("pointDblClick", function(e){
       var new_value = e.point.get("url");
@@ -832,7 +879,7 @@
   // drill up a level
   function drillUpALevel() {
      chart.drillUp();
-     chart.interactivity().selectionMode("drill-down");
+     //chart.interactivity().selectionMode("drill-down");
   }
   </script>
   </div>
