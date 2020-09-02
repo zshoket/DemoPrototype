@@ -20,20 +20,26 @@ Ext.define("SORISMA.view.main.MainViewController", {
         var navview = this.lookup("navview");
         var menuview = navview.items.items[0];
         var node = menuview.getStore().findNode("xtype", "homeview");
+        if (!centerview.getComponent("homeview")) {
+            centerview.add({
+                xtype: "homeview",
+                itemId: "homeview",
+                heading: node.get("text")
+            });
+        }
         centerview.setActiveItem("homeview");
-        menuview.setSelection(node);
         var vm = this.getViewModel();
         vm.set("heading", node.get("text"));
-
+        
         var homeview = Ext.getCmp("homeview");
         if (homeview) {
             var homeController = homeview.getController();
             homeController.reloadData();
         }
+        menuview.setSelection(node);
     }, 
 
     mainRoute: function(xtype) {
-        //var menuview = this.lookup('menuview');
         var navview = this.lookup("navview");
         var menuview = navview.items.items[0];
 
@@ -55,7 +61,6 @@ Ext.define("SORISMA.view.main.MainViewController", {
                 heading: node.get("text")
             });
         }
-        this.getViewModel().set("main_activeID", 0);
         var homeview = Ext.getCmp("homeview");
         if (homeview) {
             var homeController = homeview.getController();
@@ -71,9 +76,19 @@ Ext.define("SORISMA.view.main.MainViewController", {
         if (node == null) {
             return;
         }
+        var nodeXtype = node.get("xtype");
         var vm = this.getViewModel();
-        if (node.get("xtype") != undefined) {
-            this.redirectTo(node.get("xtype"));
+        if (nodeXtype != undefined) {
+            if (!document.location.hash.includes(nodeXtype)) {
+                if (nodeXtype === "homeview") {
+                    var activeID = vm.get('main_activeID');
+                    this.redirectTo(nodeXtype + "/" + activeID);
+                }
+                else {
+                    this.redirectTo(nodeXtype);
+                }
+                
+            }
         }
     },
 
