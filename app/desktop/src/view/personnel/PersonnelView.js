@@ -6,14 +6,13 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
     controller: {type: 'personnelviewcontroller'},
     viewModel: {type: 'personnelviewmodel'},
     store: {type: 'personnelviewstore'},
-    
+    rowNumbers: true,
     // plugins: {
     //     rowedit: {
     //         autoConfirm: false
     //     }
     // },
     columns: [
-        {xtype: 'rownumberer'},
         {
             text: 'Name',
             dataIndex: 'name',
@@ -80,7 +79,7 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
 
         listeners: {
             
-            select: 'onItemSelected'
+           select: 'onItemSelected'
             
                 }
     

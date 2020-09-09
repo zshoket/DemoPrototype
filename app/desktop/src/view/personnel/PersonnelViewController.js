@@ -9,7 +9,11 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
                     selector: '#homeview',
                     xtype: 'homeview',
                 },
+                init: function(view) {
+                    var me = this;
             
+                    me.reloadData();
+                }
             },
              
         onItemSelected: function(grid,records,e) {
@@ -17,10 +21,10 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
             debugger
             var record = records[0];
             var id = record.get('id');
-            var url = 'http://51.15.76.202:3001/api/documents/'+id; //Request aus API
+            //var url = 'http://51.15.76.202:3001/api/documents/'+id; //Request aus API
            // var url =  'http://localhost:1962/#homeview/'+id;  //Request aus FrontEnd
-          // this.redirectTo('#homeview/'+id); // was wir brauchen
-            window.location = url;
+           this.redirectTo('#homeview/'+id); // was wir brauchen
+           // window.location = url;
         }
  
 });

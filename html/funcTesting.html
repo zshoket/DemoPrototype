@@ -137,7 +137,7 @@
     fill: '#aeccd9',
       "value": 35,
     stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
-    url: "http://localhost:1962/#homeview/9"
+    url: "http://localhost:1962/#homeview/7"
      
   }, {
       "parent": "16",
@@ -187,7 +187,7 @@
       "id": "18",
       "name": "Harmonisierte IT Struktur",
       "value": 250,
-    url: "http://localhost:1962/#homeview/7",
+    url: "http://localhost:1962/#homeview/5",
     fill: '#aeccd9',
     stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
   },
@@ -764,7 +764,6 @@
       chart.listen("chartDraw",function() {
   
         chart.calculationMode("ordinal-from-leaves");
-    
           
     var credits = chart.credits();
     anychart.licenseKey("zshoket@campus.uni-paderborn.de-c3eb80d3-ac41041a");
@@ -798,18 +797,18 @@
     //     }
     // ]);
 
-      chart.contextMenu().itemsFormatter(function(items){
-      // Disable save as image option
-     delete items["save-chart-as"];
-    delete items["save-data-as"];
-    delete items["share-with"];
-      // delete about and separator 
-     //delete items["full-screen-separator"];
-     delete items["about"];
-    
-     
-     items["print-chart"].action = function(e) {
-     // alert('Custom action');
+  
+
+
+  chart.contextMenu().itemsFormatter(function(items){
+      console.log(items);
+    // starting index
+    index = items['full-screen-enter'].index;
+
+    // add item with custom action
+    items['my-item'] ={
+    'text': 'Steckbrief Offnen',
+    'action' : chart.listen('click', function (e) {
       var new_value = e.point.get("url");
     if(new_value == ""){
       //do nothing   
@@ -817,13 +816,32 @@
      //window.open(new_value,"_blank");
      top.location.href = new_value;
   }
+        
+    })
     };
 
+    
+    // add item with custom url
+    items['my-url'] = {
+    'text': 'SORISMA',
+    'href': 'http://localhost:1962/#homeview/0'
+      };
 
-    // return modified array
+     
+
+    delete items["save-chart-as"];
+    delete items["save-data-as"];
+    delete items["share-with"];
+    delete items["full-screen-separator"];
+    delete items["about"];
+    delete items["print-chart"];
+    delete items["exporting-separator"];
+    //delete items["full-screen-enter"];
+
     return items;
   });
-    
+
+  
   //   chart.listen("pointClick", function(e){
   
   // var item = e.point.get("name");
@@ -874,6 +892,7 @@
   chart.selected().stroke("#96a6a6", 4);
   
   });
+  
   
   
   // drill up a level
