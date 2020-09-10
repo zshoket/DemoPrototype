@@ -79,8 +79,8 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
 
         listeners: {
             
-           select: 'onItemSelected'
-            
+           select: 'onItemSelected',
+           
                 }
     
 

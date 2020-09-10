@@ -48,6 +48,12 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         iconCls: "x-fa fa-table",
                         xtype: "personnelview",
                         leaf: true
+                    },
+                    {
+                        text: "Datenexplorer",
+                        iconCls: "x-fa fa-th-list",
+                        xtype: "dataexplorerview",
+                        leaf: true
                     }
                     
                     

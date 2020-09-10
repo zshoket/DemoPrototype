@@ -801,8 +801,6 @@
 
 
   chart.contextMenu().itemsFormatter(function(items){
-      console.log(items);
-    // starting index
     index = items['full-screen-enter'].index;
 
     // add item with custom action
@@ -819,15 +817,10 @@
         
     })
     };
-
-    
-    // add item with custom url
     items['my-url'] = {
     'text': 'SORISMA',
     'href': 'http://localhost:1962/#homeview/0'
       };
-
-     
 
     delete items["save-chart-as"];
     delete items["save-data-as"];
@@ -836,7 +829,7 @@
     delete items["about"];
     delete items["print-chart"];
     delete items["exporting-separator"];
-    //delete items["full-screen-enter"];
+    delete items["full-screen-enter"];
 
     return items;
   });
