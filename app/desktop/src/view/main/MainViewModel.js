@@ -50,13 +50,18 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         leaf: true
                     },
                     {
-                        text: "Datenexplorer",
+                        text: "Risikoexplorer",
                         iconCls: "x-fa fa-th-list",
-                        xtype: "dataexplorerview",
+                        xtype: "risikoview",
+                        leaf: true
+                    },
+                    {
+                        text: "Risikoursachen",
+                        iconCls: "x-fa fa-file",
+                        xtype: "ursachenview",
                         leaf: true
                     }
-                    
-                    
+
                 ]
             }
         }

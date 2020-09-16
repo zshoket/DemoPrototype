@@ -11,9 +11,23 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
                 }
             },
              
-        onItemSelected: function(grid,records,e) {
+            onApprove: function(grid, info) {
+              var myId = info.record.get('id');
+              var url = "http://localhost:3001/api/documents/"+myId+"/risikos";
+              if (Response.url == [])
+              {
+                Ext.Msg.alert('No Risks Found');
+              } else
+              {
+                window.location = url;
+              }
+              
+          },
 
-            debugger
+
+
+
+        onItemSelected: function(grid,records,e) {
             var record = records[0];
             var id = record.get('id');
             if (id == '5ece3143a7f3956194cb74e9') {

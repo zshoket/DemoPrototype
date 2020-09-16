@@ -2,7 +2,6 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
     extend: 'Ext.grid.Grid',
     xtype: 'personnelview',
     cls: 'personnelview',
-    requires: ['Ext.grid.rowedit.Plugin'],
     controller: {type: 'personnelviewcontroller'},
     viewModel: {type: 'personnelviewmodel'},
     store: {type: 'personnelviewstore'},
@@ -74,12 +73,29 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
             dataIndex: 'veraenderungenTechnologie',
             editable: false,
             width: 230
-        }   
-    ],
-
-        listeners: {
+        },
+        {
+            text: 'Risiken anzeigen',
+            width: 140,
+            hideable: false,
+            sortable: false,
+            disableSelection: true,
+            menuDisabled: true,
+            rowSelect: false,
+            cell: {
+                tools: {
+                    approve: {
+                    iconCls: "x-fa fa-forward",
+                    handler: 'onApprove'
+                    }
+                 }
+            }
             
-           select: 'onItemSelected',
+        }          
+    ],
+        listeners: {
+                
+            select: 'onItemSelected',
            
                 }
     
