@@ -15,7 +15,7 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
               var myId = info.record.get('id');
               var url = "http://localhost:3001/api/documents/"+myId+"/risikos";
               debugger
-              obj = Response.url;
+              //obj = Response.url;
               // var jsonObject= JSON.stringify(response); 
               // var count = JSON.parse(jsonObject).length;
 

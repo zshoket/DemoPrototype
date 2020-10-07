@@ -35,7 +35,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         text: "Radar Chart",
                     //    iconCls: "x-fa fa-crosshairs",
                    // iconCls: "x-fa fa-spinner fa-spin fa-fw",
-                    iconCls: "fa fa-cog fa-spin",
+                    iconCls: "fa fa-stroopwafel fa-spin",
                     xtype: "d3Sunburst",
                         leaf: true
                     },
@@ -65,7 +65,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                     },
                     {
                         text: "Risikoauswirkung",
-                        iconCls: "x-fa fa-fax",
+                        iconCls: "x-fa fa-indent",
                         xtype: "auswirkungview",
                         leaf: true
                     }

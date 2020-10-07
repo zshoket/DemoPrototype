@@ -2,6 +2,9 @@ Ext.define('SORISMA.view.auswirkung.auswirkungViewModel', {
 	extend: 'Ext.app.ViewModel',
 	alias: 'viewmodel.auswirkungviewmodel',
 	data: {
-		name: 'SORISMA'
+		id: "",
+        name: "",
+        risikoId: "",
+		documentsId: ""
 	}
 });

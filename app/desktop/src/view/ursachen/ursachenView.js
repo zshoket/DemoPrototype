@@ -19,7 +19,25 @@ Ext.define('SORISMA.view.ursachen.ursachen',{
             editable: false,
             width: 460,
             cell: {userCls: 'bold'}
-        }
+        },
+        {
+            text: 'Risiken anzeigen',
+            width: 140,
+            hideable: false,
+            sortable: false,
+            disableSelection: true,
+            menuDisabled: true,
+            rowSelect: false,
+            cell: {
+                tools: {
+                    approve: {
+                    iconCls: "x-fa fa-paperclip",
+                    handler: 'onMyClick'
+                    }
+                 }
+            }
+            
+        } 
     ],
 
         listeners: {
