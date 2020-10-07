@@ -30,7 +30,25 @@ Ext.define('SORISMA.view.risiko.risiko',{
             dataIndex: 'dimension',
             editable: false,
             width: 150
-        }
+        },
+        {
+            text: 'Auswirkungen anzeigen',
+            width: 180,
+            hideable: false,
+            sortable: false,
+            disableSelection: true,
+            menuDisabled: true,
+            rowSelect: false,
+            cell: {
+                tools: {
+                    approve: {
+                    iconCls: "x-fa fa-angle-double-right",
+                    handler: 'onButton'
+                    }
+                 }
+            }
+            
+        }  
     ],
 
         listeners: {

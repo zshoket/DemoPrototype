@@ -10,11 +10,20 @@ Ext.define('SORISMA.view.risiko.risikoViewController', {
                     xtype: 'homeview',
                 }
             },
+
+            onButton: function(grid, info) {
+                var newId = info.record.get('id');
+                var url = "http://localhost:3001/api/risikos/"+newId+"/risikoauswirkungs";
+                if (url == []) {
+                   Ext.Msg.alert('No Riskscause Found');
+                }else {
+                  window.location = url;
+                 }
+                },
              
          onItemSelected: function(grid,records,e) {
              var record = records[0];
              var id = record.get('id');
-            // window.location.href = "http://localhost:3001/api/risikos/"+id+"/risikoursachens";
              var url = "http://localhost:3001/api/risikos/"+id+"/risikoursachens";
             // this.redirectTo('#ursachenview');
             window.location = url;

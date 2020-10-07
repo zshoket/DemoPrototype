@@ -5,7 +5,11 @@ Ext.define('SORISMA.store.ursachenViewStore', {
 
     proxy: {
         type: "ajax", 
-        url: "http://localhost:3001/api/risikoursachens",
+        url: "http://localhost:3001/api/risikoursachens/",
+        // url: 
+        // "http://localhost:3001/api/risikos/"+id+"/risikoursachens",
+   // "http://localhost:3001/api/risikoursachens/"+id+"/risikos",
+
         headers: {
             Accept: "application/json"
         },

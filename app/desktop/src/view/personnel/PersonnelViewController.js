@@ -14,18 +14,43 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
             onApprove: function(grid, info) {
               var myId = info.record.get('id');
               var url = "http://localhost:3001/api/documents/"+myId+"/risikos";
-              if (Response.url == [])
-              {
-                Ext.Msg.alert('No Risks Found');
-              } else
-              {
+              debugger
+              obj = Response.url;
+              // var jsonObject= JSON.stringify(response); 
+              // var count = JSON.parse(jsonObject).length;
+
+              // function isEmptyObject(url) {
+              //   return !Object.keys(url).length;
+              // }
+              
+              // function isEmptyObject(obj) {
+              //   for (var key in obj) {
+              //     if (Object.prototype.hasOwnProperty.call(obj, key)) {
+              //       return false;
+              //     }
+              //   }
+              //   return true;
+              // }
+
+              if (url.Response == []) {
+                 Ext.Msg.alert('No Risks Found');
+              }else {
                 window.location = url;
-              }
+               }
+          // if (Object.keys(result).length == 2) {
+          //    alert('empty obj')
+          //   }
+              // obj = url;  
+              // if (Object.keys(obj).length === 2)
+              // {
+              //   Ext.Msg.alert('No Risks Found');
+              // } 
+              //  else
+              //  {
+              //    window.location = url;
+              //  }
               
           },
-
-
-
 
         onItemSelected: function(grid,records,e) {
             var record = records[0];
@@ -201,10 +226,7 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
               {
                 alert("Does not exists");
               }
-            //var url = 'http://51.15.76.202:3001/api/documents/'+id; //Request aus API
-           // var url =  'http://localhost:1962/#homeview/'+id;  //Request aus FrontEnd
-          // this.redirectTo('#homeview/0'); // was wir brauchen
-           // window.location = url;
+           
         }
  
 });

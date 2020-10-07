@@ -33,24 +33,26 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                 children: [
                     {
                         text: "Radar Chart",
-                        iconCls: "x-fa fa-crosshairs",
-                        xtype: "d3Sunburst",
+                    //    iconCls: "x-fa fa-crosshairs",
+                   // iconCls: "x-fa fa-spinner fa-spin fa-fw",
+                    iconCls: "fa fa-cog fa-spin",
+                    xtype: "d3Sunburst",
                         leaf: true
                     },
                     {
-                        text: "Steckbriefe",
+                        text: "Steckbriefe (Detail)",
                         iconCls: "x-fa fa-home",
                         xtype: "homeview",
                         leaf: true
                     },
                     {
-                        text: "Listenansicht",
+                        text: "Steckbriefe (Listenansicht)",
                         iconCls: "x-fa fa-table",
                         xtype: "personnelview",
                         leaf: true
                     },
                     {
-                        text: "Risikoexplorer",
+                        text: "Risiken",
                         iconCls: "x-fa fa-th-list",
                         xtype: "risikoview",
                         leaf: true
@@ -59,6 +61,12 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         text: "Risikoursachen",
                         iconCls: "x-fa fa-file",
                         xtype: "ursachenview",
+                        leaf: true
+                    },
+                    {
+                        text: "Risikoauswirkung",
+                        iconCls: "x-fa fa-fax",
+                        xtype: "auswirkungview",
                         leaf: true
                     }
 
