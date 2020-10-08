@@ -1,7 +1,7 @@
 Ext.define('SORISMA.view.risiko.risiko',{
     extend: 'Ext.grid.Grid',
     xtype: 'risikoview',
-    cls: 'risikoview',
+    cls: 'risikoView',
     controller: {type: 'risikoviewcontroller'},
     viewModel: {type: 'risikoviewmodel'},
     store: {type: 'risikoviewstore'},

@@ -3,13 +3,6 @@ Ext.define('SORISMA.view.risiko.risikoViewController', {
     alias: 'controller.risikoviewcontroller',
 
 
-             refs: {
-                HomeView: {
-                    autoCreate: true,
-                    selector: '#homeview',
-                    xtype: 'homeview',
-                }
-            },
 
             onButton: function(grid, info) {
                 var newId = info.record.get('id');

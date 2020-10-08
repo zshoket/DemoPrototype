@@ -15,22 +15,22 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
               var myId = info.record.get('id');
               var url = "http://localhost:3001/api/documents/"+myId+"/risikos";
               debugger
-              //obj = Response.url;
-              // var jsonObject= JSON.stringify(response); 
-              // var count = JSON.parse(jsonObject).length;
+              obj = Response.url;
+              var jsonObject= JSON.stringify(response); 
+              var count = JSON.parse(jsonObject).length;
 
-              // function isEmptyObject(url) {
-              //   return !Object.keys(url).length;
-              // }
+              function isEmptyObject(url) {
+                return !Object.keys(url).length;
+              }
               
-              // function isEmptyObject(obj) {
-              //   for (var key in obj) {
-              //     if (Object.prototype.hasOwnProperty.call(obj, key)) {
-              //       return false;
-              //     }
-              //   }
-              //   return true;
-              // }
+              function isEmptyObject(obj) {
+                for (var key in obj) {
+                  if (Object.prototype.hasOwnProperty.call(obj, key)) {
+                    return false;
+                  }
+                }
+                return true;
+              }
 
               if (url.Response == []) {
                  Ext.Msg.alert('No Risks Found');
