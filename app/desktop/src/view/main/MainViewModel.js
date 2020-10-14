@@ -68,8 +68,13 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         iconCls: "x-fa fa-indent",
                         xtype: "auswirkungview",
                         leaf: true
+                    },{
+                        text: "Dataview",
+                        iconCls: "x-fa fa-crosshairs",
+                        xtype: "dataview",
+                        leaf: true
                     }
-
+                    
                 ]
             }
         }

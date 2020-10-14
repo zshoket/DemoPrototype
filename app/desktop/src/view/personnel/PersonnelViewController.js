@@ -13,7 +13,7 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
              
             onApprove: function(grid, info) {
               var myId = info.record.get('id');
-              var url = "http://localhost:3001/api/documents/"+myId+"/risikos";
+              var url = "http://51.15.76.202:3001/api/documents/"+myId+"/risikos";
               debugger
               obj = Response.url;
               var jsonObject= JSON.stringify(response); 

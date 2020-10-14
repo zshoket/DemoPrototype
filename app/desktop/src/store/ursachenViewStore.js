@@ -1,14 +1,14 @@
 Ext.define('SORISMA.store.ursachenViewStore', {
     extend: 'Ext.data.Store',
     alias: 'store.ursachenviewstore',
-    model: 'SORISMA.model.Usecase',
+    model: 'SORISMA.model.Risikos',
 
     proxy: {
         type: "ajax", 
-        url: "http://localhost:3001/api/risikoursachens/",
+        url: "http://51.15.76.202:3001/api/risikoursachens/",
         // url: 
-        // "http://localhost:3001/api/risikos/"+id+"/risikoursachens",
-   // "http://localhost:3001/api/risikoursachens/"+id+"/risikos",
+        // "http://51.15.76.202:3001/api/risikos/"+id+"/risikoursachens",
+   // "http://51.15.76.202:3001/api/risikoursachens/"+id+"/risikos",
 
         headers: {
             Accept: "application/json"

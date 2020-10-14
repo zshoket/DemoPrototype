@@ -6,7 +6,7 @@ Ext.define('SORISMA.view.risiko.risikoViewController', {
 
             onButton: function(grid, info) {
                 var newId = info.record.get('id');
-                var url = "http://localhost:3001/api/risikos/"+newId+"/risikoauswirkungs";
+                var url = "http://51.15.76.202:3001/api/risikos/"+newId+"/risikoauswirkungs";
                 if (url == []) {
                    Ext.Msg.alert('No Riskscause Found');
                 }else {
@@ -17,7 +17,7 @@ Ext.define('SORISMA.view.risiko.risikoViewController', {
          onItemSelected: function(grid,records,e) {
              var record = records[0];
              var id = record.get('id');
-             var url = "http://localhost:3001/api/risikos/"+id+"/risikoursachens";
+             var url = "http://51.15.76.202:3001/api/risikos/"+id+"/risikoursachens";
             // this.redirectTo('#ursachenview');
             window.location = url;
          }

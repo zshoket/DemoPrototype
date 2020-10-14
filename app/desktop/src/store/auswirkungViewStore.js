@@ -1,11 +1,11 @@
 Ext.define('SORISMA.store.auswirkungViewStore', {
     extend: 'Ext.data.Store',
     alias: 'store.auswirkungviewstore',
-    model: 'SORISMA.model.Usecase',
+    model: 'SORISMA.model.Risikos',
 
     proxy: {
         type: "ajax", 
-        url: "http://localhost:3001/api/risikoauswirkungs",
+        url: "http://51.15.76.202:3001/api/risikoauswirkungs",
         
         headers: {
             Accept: "application/json"

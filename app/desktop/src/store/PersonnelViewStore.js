@@ -6,7 +6,7 @@ Ext.define('SORISMA.store.PersonnelViewStore', {
     proxy: {
         type: "ajax", 
       //  url: "http://localhost:3002/getAll",
-    // url: "http://localhost:3001/api/documents/",
+    // url: "http://51.15.76.202:3001/api/documents/",
      url: "http://51.15.76.202:3001/api/documents/",
         headers: {
             Accept: "application/json"
