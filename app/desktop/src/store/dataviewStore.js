@@ -3,6 +3,7 @@ Ext.define('SORISMA.store.dataviewStore', {
     alias: 'store.dataviewstore',
     model: 'SORISMA.model.Risikos',
 
+        
         autoSync:true,
         proxy: {
             type: 'memory',
@@ -18,16 +19,10 @@ Ext.define('SORISMA.store.dataviewStore', {
 
         
 
-            getJsonOfStore:  function (store){
-                getData().getSource('risikoviewstore');
-                var datar = new Array();
-                var jsonDataEncode = "";
-                var records = store.getRange();
-                for (var i = 0; i < records.length; i++) {
-                    datar.push(records[i].data);
-                }
-                jsonDataEncode = Ext.util.JSON.encode(datar);
-                return jsonDataEncode;
+            getDataOfStore:  function (store){
+                var rawData = store.getAuswirkung();
+                var allRecords = (auswirkungviewstore.getData().getSource() || auswirkungviewstore.getData()).getRange();
+                var myRecords = (store.getData().getSource() || store.getData()).getRange();
             }
 
 

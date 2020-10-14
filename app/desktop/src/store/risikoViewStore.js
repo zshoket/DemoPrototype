@@ -3,6 +3,11 @@ Ext.define('SORISMA.store.risikoViewStore', {
     alias: 'store.risikoviewstore',
     model: 'SORISMA.model.Risikos',
 
+    getRisiko: function(){
+        return Ext.Array.map(this.getData().getSource(), function(record){
+            return record.data;
+        });
+    },
     proxy: {
         type: "ajax", 
         url: "http://51.15.76.202:3001/api/risikos",

@@ -3,6 +3,12 @@ Ext.define('SORISMA.store.auswirkungViewStore', {
     alias: 'store.auswirkungviewstore',
     model: 'SORISMA.model.Risikos',
 
+    getAuswirkung: function(){
+        return Ext.Array.map(this.getData().getSource(), function(record){
+            return record.data;
+        });
+    },
+
     proxy: {
         type: "ajax", 
         url: "http://51.15.76.202:3001/api/risikoauswirkungs",
@@ -16,6 +22,5 @@ Ext.define('SORISMA.store.auswirkungViewStore', {
         }
     },
     autoLoad: true,
-
 
 });
