@@ -12,18 +12,7 @@ Ext.define("SORISMA.model.Risikos", {
         ],
        // hasMany: {model: 'SORISMA.model.Ursachen', name: 'ursachen', foreignKey: 'risikoursachenId'},
     
-        proxy: {
-            type: "ajax", 
-            url: "http://51.15.76.202:3001/api/risikos",
-            headers: {
-                Accept: "application/json"
-            },
-            reader: {
-                type: 'json',
-                rootProperty: 'items'
-            }
-        },
-        autoLoad: true,
+      
     });
 
 
@@ -38,18 +27,7 @@ Ext.define("SORISMA.model.Risikos", {
             { name: "risikoId", type: "auto", reference: 'Risikos' },
             { name: "documentsId", type: "auto", reference: 'Risikos' }
         ],
-        proxy: {
-            type: "ajax", 
-            url: "http://51.15.76.202:3001/api/risikoursachens/",
-            headers: {
-                Accept: "application/json"
-            },
-            reader: {
-                type: 'json',
-                rootProperty: 'items'
-            }
-        },
-        autoLoad: true,
+      
     });
 
 
@@ -62,19 +40,7 @@ Ext.define("SORISMA.model.Risikos", {
             { name: "risikoId", type: "auto", reference: 'Risikos' },
             { name: "documentsId", type: "auto", reference: 'Risikos' }
         ],
-        proxy: {
-            type: "ajax", 
-            url: "http://51.15.76.202:3001/api/risikoauswirkungs",
-            
-            headers: {
-                Accept: "application/json"
-            },
-            reader: {
-                type: 'json',
-                rootProperty: 'items'
-            }
-        },
-        autoLoad: true,
+     
     
     });
 

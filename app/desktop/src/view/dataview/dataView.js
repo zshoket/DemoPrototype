@@ -5,6 +5,7 @@ Ext.define('SORISMA.view.dataview.dataView',{
     controller: {type: 'dataviewcontroller'},
     viewModel: {type: 'dataviewmodel'},
     store: {type: 'dataviewstore'},
+    id: 'myData',
     rowNumbers: true,
     columns: [
         {
@@ -15,13 +16,13 @@ Ext.define('SORISMA.view.dataview.dataView',{
             cell: {userCls: 'bold'}
         },
         {
-            text: 'Risikoursachen',
+            text: 'Eintrittswahrscheinlichkeit',
             dataIndex: 'eintritWahr',
             editable: false,
             width: '25%'
         },
         {
-            text: 'Risikoauswirkung',
+            text: 'Schadenshöhe',
             dataIndex: 'schadenshohe',
             editable: false,
             width: '25%'
