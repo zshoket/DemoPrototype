@@ -2,7 +2,7 @@ Ext.define('SORISMA.store.auswirkungViewStore', {
     extend: 'Ext.data.Store',
     alias: 'store.auswirkungviewstore',
     model: 'SORISMA.model.Risikos',
-
+    storeId: 'nbe2',
     getAuswirkung: function(){
         return Ext.Array.map(this.getData().getSource(), function(record){
             return record.data;

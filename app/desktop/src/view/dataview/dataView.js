@@ -10,35 +10,27 @@ Ext.define('SORISMA.view.dataview.dataView',{
         {
             text: 'Risiko',
             dataIndex: 'name',
-            editable: false, 
-            width: 250,
-            cell: {userCls: 'bold'},
-            
+            editable: false,
+            width: '35%',
+            cell: {userCls: 'bold'}
         },
         {
             text: 'Risikoursachen',
-            dataIndex: 'dimension',
+            dataIndex: 'eintritWahr',
             editable: false,
-            width: 250
+            width: '25%'
         },
         {
             text: 'Risikoauswirkung',
-            dataIndex: 'einordnungKette',
+            dataIndex: 'schadenshohe',
             editable: false,
-            width: 230
-        },
-        {
+            width: '25%'
+        },{
             text: 'Dimension',
-            dataIndex: 'kurzbeschreibung',
+            dataIndex: 'dimension',
             editable: false,
-            width: 230
-        },
-        {
-            text: 'Document',
-            dataIndex: 'reifegrad',
-            editable: false,
-            width: 230,
-        },
+            width: '15%',
+        }
     ],
         listeners: {
                 
