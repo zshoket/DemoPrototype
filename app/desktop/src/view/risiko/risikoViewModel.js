@@ -7,7 +7,7 @@ Ext.define('SORISMA.view.risiko.risikoViewModel', {
         name: "",
         documentsId: "",
         risikoursachenId: "",
-		home_einordnungKette: "",
+		einordnungKette: "",
 		dimension: "",
 		eintritWahr: "",
 		schadenshohe: ""

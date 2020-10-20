@@ -9,6 +9,14 @@ Ext.define("SORISMA.view.main.MainViewController", {
             conditions: {
                 ":id": "([0-9]+)"
             }
+        },
+
+        ":xtype": { action: "mainRoute" },
+        "dataview/:id": {
+            action: "showRisiko",
+            conditions: {
+                ":id": "([0-9]+)"
+            }
         }
     },
 
@@ -37,7 +45,34 @@ Ext.define("SORISMA.view.main.MainViewController", {
             homeController.reloadData();
         }
         menuview.setSelection(node);
-    }, 
+    },
+    
+    showRisiko: function(id) {
+        var me = this;
+
+        me.getViewModel().set("main_activeID", id);
+        var centerview = me.lookup("centerview");
+        var navview = this.lookup("navview");
+        var menuview = navview.items.items[0];
+        var node = menuview.getStore().findNode("xtype", "dataview");
+        if (!centerview.getComponent("dataview")) {
+            centerview.add({
+                xtype: "dataview",
+                itemId: "dataview",
+                heading: node.get("text")
+            });
+        }
+        centerview.setActiveItem("dataview");
+        var vm = this.getViewModel();
+        vm.set("heading", node.get("text"));
+        
+        var dataview = Ext.getCmp("dataview");
+        if (dataview) {
+            var dataController = dataview.getController();
+            dataController.reloadData();
+        }
+        menuview.setSelection(node);
+    },
 
     mainRoute: function(xtype) {
         var navview = this.lookup("navview");
@@ -61,6 +96,7 @@ Ext.define("SORISMA.view.main.MainViewController", {
                 heading: node.get("text")
             });
         }
+
         var homeview = Ext.getCmp("homeview");
         if (homeview) {
             var homeController = homeview.getController();
@@ -70,7 +106,19 @@ Ext.define("SORISMA.view.main.MainViewController", {
         menuview.setSelection(node);
         var vm = this.getViewModel();
         vm.set("heading", node.get("text"));
+
+        
+        var dataview = Ext.getCmp("dataview");
+        if (dataview) {
+            var dataController = dataview.getController();
+            dataController.reloadData();
+        }
+        centerview.setActiveItem(xtype);
+        menuview.setSelection(node);
+        var vm = this.getViewModel();
+        vm.set("heading", node.get("text")); 
     }, 
+    
 
     onMenuViewSelectionChange: function(tree, node) {
         if (node == null) {

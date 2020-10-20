@@ -4,21 +4,17 @@ Ext.define('SORISMA.store.dataviewStore', {
     model: 'SORISMA.model.Risikos',
  
 
-
-    autoSync: true,
     proxy: {
-        type: 'memory',
-        headers: {
-            Accept: "application/json"
-        },
+        type: "ajax", 
+        
+        url: "http://localhost:3001/api/jointData",
         reader: {
             type: 'json',
             rootProperty: 'items'
         }
     },
     autoLoad: true
-
-    
+});
     // getDataOfStore:  function (store){
     //     var rawData = store.getAuswirkung();
     //     var allRecords = (auswirkungviewstore.getData().getSource() || auswirkungviewstore.getData()).getRange();
@@ -26,7 +22,6 @@ Ext.define('SORISMA.store.dataviewStore', {
     // }
 
 
-});
 
 // var chained1 = Ext.create('Ext.data.ChainedStore', {
 //     source: nbe2,
