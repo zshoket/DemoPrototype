@@ -7,7 +7,7 @@ Ext.define('SORISMA.store.dataviewStore', {
     proxy: {
         type: "ajax", 
         
-        url: "http://localhost:3001/api/jointData",
+        url: "http://51.15.76.202:3001/api/jointData",
         reader: {
             type: 'json',
             rootProperty: 'items'

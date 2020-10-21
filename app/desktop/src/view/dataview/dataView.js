@@ -29,7 +29,6 @@ Ext.define('SORISMA.view.dataview.dataView',{
         {
             title: "Risiko",
             width: '60%',
-            flex: 1,
             split: true,
             header: {
                 style: {
@@ -46,7 +45,6 @@ Ext.define('SORISMA.view.dataview.dataView',{
             width: '38%',
             height: 100,
             split: true,
-            flex: 1,
             header: {
                 style: {
                     backgroundColor: '#7f7f7f'
@@ -70,7 +68,8 @@ Ext.define('SORISMA.view.dataview.dataView',{
             split: true,
 			bind: {
                 html: 
-                '<p style="font-size:14px">{home_risikoUrsachen}</p>',
+                '<ul><li>{home_risikoUrsachen}</li></ul>'
+        //'<p style="font-size:14px">{home_risikoUrsachen}</p>',
             }
         },
         {

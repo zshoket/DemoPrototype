@@ -32,8 +32,8 @@ Ext.define('SORISMA.view.risiko.risiko',{
             width: 150
         },
         {
-            text: 'Auswirkungen anzeigen',
-            width: 180,
+            text: 'Risikoursache/Auswirkung zeigen',
+            width: 200,
             hideable: false,
             sortable: false,
             disableSelection: true,

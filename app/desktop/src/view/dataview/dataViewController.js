@@ -4,7 +4,7 @@ Ext.define('SORISMA.view.dataview.dataViewController', {
 
     init: function(view) {
 		var me = this;
-		me.reloadData();
+        me.reloadData();
 	},
 
 	reloadData: function() {
@@ -24,6 +24,13 @@ Ext.define('SORISMA.view.dataview.dataViewController', {
 		}
 	},
 
+
+    // dataToList: function() {
+    //      var text = 'home_risikoAuswirkung';
+    //      var nameArr = text.split(',');
+    //      console.log(nameArr);
+         
+    //      }
     // combineStoreData: function () {
     //     var me = this;
     //     debugger

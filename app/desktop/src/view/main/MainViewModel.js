@@ -52,7 +52,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         leaf: true
                     },
                     {
-                        text: "Risiken",
+                        text: "Risiken (Listenansicht)",
                         iconCls: "x-fa fa-th-list",
                         xtype: "risikoview",
                         leaf: true
@@ -69,8 +69,8 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         xtype: "auswirkungview",
                         leaf: true
                     },{
-                        text: "Dataview",
-                        iconCls: "x-fa fa-crosshairs",
+                        text: "Risiko (Datenansicht)",
+                        iconCls: "x-fa fa-list-alt",
                         xtype: "dataview",
                         leaf: true
                     }
