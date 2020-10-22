@@ -10,17 +10,15 @@ Ext.define("SORISMA.view.main.MainViewController", {
                 ":id": "([0-9]+)"
             }
         },
-
-        ":xtype": { action: "mainRoute" },
         "dataview/:id": {
-            action: "showRisiko",
+            action: "showDataOfRisiko",
             conditions: {
                 ":id": "([0-9]+)"
             }
         }
     },
 
-    showUsecase: function(id) {
+    showUsecase: function (id) {
         var me = this;
 
         me.getViewModel().set("main_activeID", id);
@@ -38,7 +36,7 @@ Ext.define("SORISMA.view.main.MainViewController", {
         centerview.setActiveItem("homeview");
         var vm = this.getViewModel();
         vm.set("heading", node.get("text"));
-        
+
         var homeview = Ext.getCmp("homeview");
         if (homeview) {
             var homeController = homeview.getController();
@@ -46,11 +44,11 @@ Ext.define("SORISMA.view.main.MainViewController", {
         }
         menuview.setSelection(node);
     },
-    
-    showRisiko: function(id) {
-        var me = this;
 
-        me.getViewModel().set("main_activeID", id);
+    showDataOfRisiko: function (id) {
+        var me = this;
+        debugger
+        me.getViewModel().set("main_risikoID", id);
         var centerview = me.lookup("centerview");
         var navview = this.lookup("navview");
         var menuview = navview.items.items[0];
@@ -65,16 +63,16 @@ Ext.define("SORISMA.view.main.MainViewController", {
         centerview.setActiveItem("dataview");
         var vm = this.getViewModel();
         vm.set("heading", node.get("text"));
-        
+
         var dataview = Ext.getCmp("dataview");
         if (dataview) {
             var dataController = dataview.getController();
-            dataController.reloadData();
+            dataController.reloadRiskData();
         }
         menuview.setSelection(node);
     },
 
-    mainRoute: function(xtype) {
+    mainRoute: function (xtype) {
         var navview = this.lookup("navview");
         var menuview = navview.items.items[0];
 
@@ -107,20 +105,20 @@ Ext.define("SORISMA.view.main.MainViewController", {
         var vm = this.getViewModel();
         vm.set("heading", node.get("text"));
 
-        
+
         var dataview = Ext.getCmp("dataview");
         if (dataview) {
             var dataController = dataview.getController();
-            dataController.reloadData();
+            dataController.reloadRiskData();
         }
         centerview.setActiveItem(xtype);
         menuview.setSelection(node);
         var vm = this.getViewModel();
-        vm.set("heading", node.get("text")); 
-    }, 
-    
+        vm.set("heading", node.get("text"));
+    },
 
-    onMenuViewSelectionChange: function(tree, node) {
+
+    onMenuViewSelectionChange: function (tree, node) {
         if (node == null) {
             return;
         }
@@ -132,37 +130,41 @@ Ext.define("SORISMA.view.main.MainViewController", {
                     var activeID = vm.get('main_activeID');
                     this.redirectTo(nodeXtype + "/" + activeID);
                 }
+                else if (nodeXtype === "dataview") {
+                    var activeriskID = vm.get('main_risikoID');
+                    this.redirectTo(nodeXtype + "/" + activeriskID);
+                }
                 else {
                     this.redirectTo(nodeXtype);
                 }
-                
+
             }
         }
     },
 
-    onTopViewNavToggle: function() {
+    onTopViewNavToggle: function () {
         var vm = this.getViewModel();
         vm.set("navCollapsed", !vm.get("navCollapsed"));
     },
 
     /* onHeaderViewDetailToggle: function (button) {
-		var vm = this.getViewModel();
-		vm.set('detailCollapsed', !vm.get('detailCollapsed'));
-		if(vm.get('detailCollapsed')===true) {
-			button.setIconCls('x-fa fa-arrow-left');
-		}
-		else {
-			button.setIconCls('x-fa fa-arrow-right');
-		}
-	}, */
+        var vm = this.getViewModel();
+        vm.set('detailCollapsed', !vm.get('detailCollapsed'));
+        if(vm.get('detailCollapsed')===true) {
+            button.setIconCls('x-fa fa-arrow-left');
+        }
+        else {
+            button.setIconCls('x-fa fa-arrow-right');
+        }
+    }, */
 
-    onBottomViewlogout: function() {
+    onBottomViewlogout: function () {
         localStorage.setItem("LoggedIn", false);
         this.getView().destroy();
         Ext.Viewport.add([{ xtype: "loginview" }]);
     }
 
-    
+
 
     //	onActionsViewLogoutTap: function( ) {
     //		var vm = this.getViewModel();

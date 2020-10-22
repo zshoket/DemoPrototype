@@ -12,18 +12,19 @@ Ext.define("SORISMA.view.main.MainViewModel", {
         headerview_height: 50,
         footerview_height: 50,
         detailCollapsed: true,
-        main_activeID: 0 // ID of the currently active entry
-        
+        main_activeID: 0,
+        main_risikoID: 0 // ID of the currently active entry
+
     },
     formulas: {
-        navview_width: function(get) {
+        navview_width: function (get) {
             return get("navCollapsed")
                 ? get("navview_min_width")
                 : get("navview_max_width");
         }
         /* detailview_width: function(get) {
-			return get('detailCollapsed') ? get('detailview_min_width') : get('detailview_max_width');
-		} */
+            return get('detailCollapsed') ? get('detailview_min_width') : get('detailview_max_width');
+        } */
     },
     stores: {
         menu: {
@@ -33,10 +34,10 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                 children: [
                     {
                         text: "Radar Chart",
-                    //    iconCls: "x-fa fa-crosshairs",
-                   // iconCls: "x-fa fa-spinner fa-spin fa-fw",
-                    iconCls: "fa fa-stroopwafel fa-spin",
-                    xtype: "d3Sunburst",
+                        //    iconCls: "x-fa fa-crosshairs",
+                        // iconCls: "x-fa fa-spinner fa-spin fa-fw",
+                        iconCls: "fa fa-stroopwafel fa-spin",
+                        xtype: "d3Sunburst",
                         leaf: true
                     },
                     {
@@ -68,13 +69,13 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         iconCls: "x-fa fa-indent",
                         xtype: "auswirkungview",
                         leaf: true
-                    },{
+                    }, {
                         text: "Risiko (Datenansicht)",
                         iconCls: "x-fa fa-list-alt",
                         xtype: "dataview",
                         leaf: true
                     }
-                    
+
                 ]
             }
         }

@@ -2,55 +2,45 @@ Ext.define('SORISMA.view.dataview.dataViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.dataviewcontroller',
 
-    init: function(view) {
-		var me = this;
-        me.reloadData();
-	},
-
-	reloadData: function() {
+    init: function (view) {
         var me = this;
-        debugger
-		var view = me.getView();
-		var mainVM = Ext.getCmp('mainview').getViewModel();
-		var activeID = mainVM.get('main_activeID');
-		var record = view.store.getAt(activeID);
-		if (record) {
-			var data = record.getData();
-			var vm = me.getViewModel();
-			vm.set('home_riskName', data.riskName)
-			vm.set('home_riskDocument', data.riskDocument)
-			vm.set('home_risikoUrsachen', data.risikoUrsachen)
-			vm.set('home_risikoAuswirkung', data.risikoAuswirkung)
-		}
-	},
 
+        me.reloadRiskData();
 
-    // dataToList: function() {
-    //      var text = 'home_risikoAuswirkung';
-    //      var nameArr = text.split(',');
-    //      console.log(nameArr);
-         
-    //      }
-    // combineStoreData: function () {
-    //     var me = this;
-    //     debugger
-    //     me.getView('');
-    //     var ursachenView = me.getView().next('ursachenview');
-    //     var risikoView = me.getView().next('risikoview');
-    //     var auswirkungView = me.getView().next('auswirkungview');
-        
-    //     var uStoreArray = Ext.Array.map(ursachenView.getStore().getData().getSource(), function (record) {
-    //         return record.data;
-    //     });
-    
-    //     var riskStoreArray = Ext.Array.map(ursachenView.getStore().getData().getSource(), function (record) {
-    //         return record.data;
-    //     });
+    },
 
-    //     var ausStoreArray = Ext.Array.map(ursachenView.getStore().getData().getSource(), function (record) {
-    //         return record.data;
-    //     });
-    // }
+    reloadRiskData: function () {
+        var me = this;
 
+        var view = me.getView();
+        var mainVM = Ext.getCmp('mainview').getViewModel();
+        var activeriskID = mainVM.get('main_risikoID');
+        var record = view.store.getAt(activeriskID);
+        if (record) {
+            var data = record.getData();
+            var vm = me.getViewModel();
+
+            vm.set('data_riskName', data.riskName)
+
+            vm.set('data_riskDocument', data.riskDocument)
+
+            //The Ursachen array as list
+            var tempUrsachen = data.risikoUrsachen;
+            var strUrsachen = "";
+            for (var j in tempUrsachen) {
+                strUrsachen = strUrsachen + "<li>" + (tempUrsachen[j]).toString() + "</li>";
+            }
+            vm.set('data_risikoUrsachen', strUrsachen)
+
+            //The Auswirkung array as list
+            var tempAuswrikung = data.risikoAuswirkung;
+            var strAuswirkung = "";
+            for (var j in tempAuswrikung) {
+                strAuswirkung = strAuswirkung + "<li>" + (tempAuswrikung[j]).toString() + "</li>";
+            }
+            vm.set('data_risikoAuswirkung', strAuswirkung)
+
+        }
+    }
 });
 

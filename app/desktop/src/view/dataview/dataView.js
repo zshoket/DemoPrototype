@@ -1,9 +1,9 @@
-Ext.define('SORISMA.view.dataview.dataView',{
+Ext.define('SORISMA.view.dataview.dataView', {
     extend: "Ext.form.Panel",
     xtype: 'dataview',
     cls: 'dataview',
-    controller: {type: "dataviewcontroller"},
-    viewModel: {type: "dataviewmodel"},
+    controller: { type: "dataviewcontroller" },
+    viewModel: { type: "dataviewmodel" },
     store: Ext.create("SORISMA.store.dataviewStore", {}),
     requires: [
         "SORISMA.store.dataviewStore",
@@ -27,38 +27,24 @@ Ext.define('SORISMA.view.dataview.dataView',{
     },
     items: [
         {
-            title: "Risiko",
-            width: '60%',
+            title: "Use Case",
+            width: '98.7%',
+            height: 120,
             split: true,
             header: {
                 style: {
                     backgroundColor: '#7f7f7f'
                 }
             },
-			margin: "0 10 0 0",
-			bind: {
-				html: '<p style="font-size:14px">{home_riskName}</p>'
-            }
-        },
-        {
-            title: "Document",
-            width: '38%',
-            height: 100,
-            split: true,
-            header: {
-                style: {
-                    backgroundColor: '#7f7f7f'
-                }
-            },
-			margin: "0 10 0 0",
-			bind: {
-                html: '<b style="font-size:14px">{home_riskDocument}</b>',
+            margin: "0 10 0 0",
+            bind: {
+                html: '<b style="font-size:14px">{data_riskDocument}</b>',
             }
         },
         {
             title: "Risikoursachen",
-            width: '98.7%',
-            height: 170,
+            width: '38.7%',
+            height: '50%',
             margin: "0 11 0 0",
             header: {
                 style: {
@@ -66,16 +52,30 @@ Ext.define('SORISMA.view.dataview.dataView',{
                 }
             },
             split: true,
-			bind: {
-                html: 
-                '<ul><li>{home_risikoUrsachen}</li></ul>'
-        //'<p style="font-size:14px">{home_risikoUrsachen}</p>',
+            bind: {
+                html:
+                    '<ul style="font-size:16px">{data_risikoUrsachen}</ul>',
             }
         },
         {
-            title: "Risikoaurswirkung",
-            width: '98.5%',
-            height: 170,
+            title: "Risiko",
+            width: '21%',
+            height: '50%',
+            split: true,
+            header: {
+                style: {
+                    backgroundColor: '#7f7f7f'
+                }
+            },
+            margin: "0 10 0 0",
+            bind: {
+                html: '<p style="font-size:16px">{data_riskName}</p>'
+            }
+        },
+        {
+            title: "Risikoauswirkungen",
+            width: '38%',
+            height: '50%',
             split: true,
             header: {
                 style: {
@@ -83,43 +83,10 @@ Ext.define('SORISMA.view.dataview.dataView',{
                 }
             },
             bind: {
-                html: 
-                '<p style="font-size:14px">{home_risikoAuswirkung}</p>'
+                html:
+                    '<ul style="font-size:16px">{data_risikoAuswirkung}</ul>',
             },
         }
-    // id: 'myData',
-    // rowNumbers: true,
-    // columns: [
-    //     {
-    //         text: 'Risiko',
-    //         dataIndex: 'riskName',
-    //         editable: false,
-    //         width: '35%',
-    //         cell: {userCls: 'bold'}
-    //     },
-    //     {
-    //         text: 'Document',
-    //         dataIndex: 'riskDocument',
-    //         editable: false,
-    //         width: '25%'
-    //     },
-    //     {
-    //         text: 'Risikoursachen',
-    //         dataIndex: 'risikoUrsachen',
-    //         editable: false,
-    //         width: '25%'
-    //     },{
-    //         text: 'Risikoauswirkung',
-    //         dataIndex: 'risikoAuswirkung',
-    //         editable: false,
-    //         width: '15%',
-    //     }
-    // ],
-    //     listeners: {
-                
-    //         select: 'onItemSelected',
-           
-    //             }
     ]
 
 });
