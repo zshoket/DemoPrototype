@@ -70,7 +70,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         xtype: "auswirkungview",
                         leaf: true
                     }, {
-                        text: "Risiko (Datenansicht)",
+                        text: "Risiken (Datenansicht)",
                         iconCls: "x-fa fa-list-alt",
                         xtype: "dataview",
                         leaf: true

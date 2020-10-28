@@ -55,6 +55,7 @@ Ext.define('SORISMA.view.dataview.dataView', {
             bind: {
                 html:
                     '<ul style="font-size:16px">{data_risikoUrsachen}</ul>',
+                //"line-height:180%"
             }
         },
         {

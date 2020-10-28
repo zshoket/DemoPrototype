@@ -47,7 +47,7 @@ Ext.define("SORISMA.view.main.MainViewController", {
 
     showDataOfRisiko: function (id) {
         var me = this;
-        debugger
+
         me.getViewModel().set("main_risikoID", id);
         var centerview = me.lookup("centerview");
         var navview = this.lookup("navview");
