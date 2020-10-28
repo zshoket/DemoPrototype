@@ -11,7 +11,7 @@ Ext.define('SORISMA.view.dataview.dataViewController', {
 
     reloadRiskData: function () {
         var me = this;
-        debugger
+
         var view = me.getView();
         var mainVM = Ext.getCmp('mainview').getViewModel();
         var activeriskID = mainVM.get('main_risikoID');

@@ -64,7 +64,7 @@ Ext.define("SORISMA.view.main.MainViewController", {
         var vm = this.getViewModel();
         vm.set("heading", node.get("text"));
 
-        var dataview = Ext.getCmp("dataview");
+        var dataview = centerview.query('dataview')[0];
         if (dataview) {
             var dataController = dataview.getController();
             dataController.reloadRiskData();
