@@ -6,6 +6,7 @@ Ext.define('SORISMA.view.risiko.risiko', {
     viewModel: { type: 'risikoviewmodel' },
     store: { type: 'risikoviewstore' },
     rowNumbers: true,
+    groupField: 'identifikator',
     columns: [
         {
             text: 'Risiko',
@@ -31,6 +32,12 @@ Ext.define('SORISMA.view.risiko.risiko', {
             editable: false,
             width: 150
         },
+        {
+            text: 'Kennung',
+            dataIndex: 'identifikator',
+            editable: false,
+            width: 150
+        }
         /*   {
               text: 'Risikoursache/Auswirkung zeigen',
               width: 200,

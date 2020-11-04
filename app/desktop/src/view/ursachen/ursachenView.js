@@ -19,7 +19,12 @@ Ext.define('SORISMA.view.ursachen.ursachen', {
             editable: false,
             width: 460,
             cell: { userCls: 'bold' }
-        },
+        }, {
+            text: 'Kennung',
+            dataIndex: 'identifikator',
+            editable: false,
+            width: 150
+        }
         /* {
             text: 'Risiken anzeigen',
             width: 140,

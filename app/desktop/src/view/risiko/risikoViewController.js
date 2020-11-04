@@ -64,6 +64,9 @@ Ext.define('SORISMA.view.risiko.risikoViewController', {
     else if (id == '5efdf500ab618133e05b99cb') {
       this.redirectTo('#dataview/13');
     }
+    else if (id == '5efdf500ab618133e05b99cc') {
+      this.redirectTo('#dataview/40');
+    }
     else if (id == '5efdf500ab618133e05b99cd') {
       this.redirectTo('#dataview/14');
     }

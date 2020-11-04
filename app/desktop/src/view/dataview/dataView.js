@@ -27,7 +27,7 @@ Ext.define('SORISMA.view.dataview.dataView', {
     },
     items: [
         {
-            title: "Use Case",
+            title: "Steckbrief",
             width: '98.7%',
             height: 120,
             split: true,
