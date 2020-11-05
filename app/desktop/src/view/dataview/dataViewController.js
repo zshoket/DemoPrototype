@@ -24,6 +24,7 @@ Ext.define('SORISMA.view.dataview.dataViewController', {
 
             vm.set('data_riskDocument', data.riskDocument)
 
+            vm.set('data_identifikator', data.identifikator)
             //The Ursachen array as list
             var tempUrsachen = data.risikoUrsachen;
             var strUrsachen = "";

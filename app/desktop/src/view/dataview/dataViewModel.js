@@ -6,6 +6,7 @@ Ext.define('SORISMA.view.dataview.dataViewModel', {
         data_riskName: "",
         data_riskDocument: "",
         data_risikoUrsachen: "",
-        data_risikoAuswirkung: ""
+        data_risikoAuswirkung: "",
+        data_identifikator: ""
     }
 });

@@ -28,7 +28,7 @@ Ext.define('SORISMA.view.dataview.dataView', {
     items: [
         {
             title: "Steckbrief",
-            width: '98.7%',
+            width: '80%',
             height: 120,
             split: true,
             header: {
@@ -39,6 +39,22 @@ Ext.define('SORISMA.view.dataview.dataView', {
             margin: "0 10 0 0",
             bind: {
                 html: '<b style="font-size:14px">{data_riskDocument}</b>',
+            }
+        },
+        {
+            title: "Kennung",
+            width: '18.5%',
+            height: 120,
+            split: true,
+            flex: 1,
+            header: {
+                style: {
+                    backgroundColor: '#7f7f7f'
+                }
+            },
+            margin: "0 10 0 0",
+            bind: {
+                html: '<b style="font-size:14px">{data_identifikator}</b>',
             }
         },
         {

@@ -74,7 +74,13 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         iconCls: "x-fa fa-list-alt",
                         xtype: "dataview",
                         leaf: true
-                    }
+                    },
+                    {
+                        text: "Risikofelder",
+                        iconCls: "x-fa fa-align-justify",
+                        xtype: "risikofelderview",
+                        leaf: true
+                    },
 
                 ]
             }

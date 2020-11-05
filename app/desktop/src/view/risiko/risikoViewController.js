@@ -10,15 +10,15 @@ Ext.define('SORISMA.view.risiko.risikoViewController', {
     }
   },
 
-  /*  onButton: function(grid, info) {
-       var newId = info.record.get('id');
-       var url = "http://51.15.76.202:3001/api/risikos/"+newId+"/risikoauswirkungs";
-       if (url == []) {
-          Ext.Msg.alert('No Riskscause Found');
-       }else {
-         window.location = url;
-        }
-       }, */
+  onButton: function (grid, info) {
+    var newId = info.record.get('id');
+    var url = "http://localhost:3001/api/risikos/" + newId + "/risikoFelders"
+    if (url == []) {
+      Ext.Msg.alert('No Riskscause Found');
+    } else {
+      window.location = url;
+    }
+  },
 
   onItemSelected: function (grid, records, e) {
     var record = records[0];
@@ -146,7 +146,7 @@ Ext.define('SORISMA.view.risiko.risikoViewController', {
       this.redirectTo('#dataview/39');
     }
     else {
-      Ext.Msg.alert('Keine Risikoursache gefunden');
+      Ext.Msg.alert('Keine Risiko Datei gefunden');
     }
 
   }
