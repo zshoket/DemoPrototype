@@ -85,7 +85,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                     },
                     {
                         text: "Risikofelder (Datenansicht)",
-                        iconCls: "x-fa fa-align-justify",
+                        iconCls: "x-fa fa-barcode",
                         xtype: "felderpanelview",
                         leaf: true
                     }

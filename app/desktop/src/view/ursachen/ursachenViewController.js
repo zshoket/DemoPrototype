@@ -19,5 +19,7 @@ Ext.define('SORISMA.view.ursachen.ursachenViewController', {
          var url1 = "http://51.15.76.202:3001/api/risikoursachens/"+newId+"/documents";
          window.location = url1;
      } */
+
+
 });
 

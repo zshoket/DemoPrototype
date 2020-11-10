@@ -7,9 +7,7 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
         'SORISMA.view.felderpanel.felderpanelViewModel',
         "SORISMA.store.risikofelderViewStore",
         "Ext.form.FieldSet",
-        "Ext.form.Checkbox",
-        "Ext.form.field.*",
-        "Ext.Img",
+        "Ext.slider.*",
         "Ext.layout.VBox"
     ],
     store: Ext.create("SORISMA.store.risikofelderViewStore", {}),
@@ -55,10 +53,48 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
                     backgroundColor: '#7f7f7f'
                 }
             },
-            bind: {
-                html:
-                    '<ul style="font-size:16px">{data_kurzbeschreibung}</ul>',
-            }
+            items: [
+                {
+                    xtype: 'panel',
+                    width: '98%',
+                    height: '55%',
+                    header: false,
+                    bind: {
+                        html:
+                            '<ul style="font-size:16px">{data_kurzbeschreibung}</ul>',
+                    }
+                },
+                {
+                    xtype: 'panel',
+                    title: "Veränderte Bedeutung des Risikofelds durch Industrie 4.0",
+                    width: '110%',
+                    height: '40%',
+                    split: true,
+                    border: false,
+                    header: {
+                        style: {
+                            backgroundColor: '#7f7f7f'
+                        }
+                    },
+                    margin: "0 10 0 0",
+                    bind: {
+                        html: '<p style="font-size:16px">{data_riskLevel}</p>'
+                    },
+                    items: [
+                        {
+                            xtype: 'slider',
+                            width: '80%',
+                            values: ['25', '50', '75'],
+                            increment: 25,
+                            minValue: 0,
+                            maxValue: 100,
+                            constrainThumbs: true
+
+                        },
+
+                    ]
+                }
+            ]
 
         },
 
@@ -117,27 +153,8 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
                             '<ul style="font-size:16px">{data_stossrichtung}</ul>',
 
                     }
-                },
-                {
-                    xtype: 'panel',
-                    title: "Veränderte Bedeutung des Risikofelds durch Industrie 4.0",
-                    width: '95.3%',
-                    height: 140,
-                    split: true,
-                    border: true,
-                    style: {
-                        border: '.5px solid grey'
-                    },
-                    header: {
-                        style: {
-                            backgroundColor: '#7f7f7f'
-                        }
-                    },
-                    margin: "0 10 0 0",
-                    bind: {
-                        html: '<p style="font-size:16px">{data_riskLevel}</p>'
-                    }
-                },
+                }
+
             ]
         },
         {
