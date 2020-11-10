@@ -13,6 +13,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
         footerview_height: 50,
         detailCollapsed: true,
         main_activeID: 0,
+        main_felderID: 0,
         main_risikoID: 0 // ID of the currently active entry
 
     },
@@ -53,15 +54,21 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         leaf: true
                     },
                     {
-                        text: "Risiken (Listenansicht)",
-                        iconCls: "x-fa fa-th-list",
-                        xtype: "risikoview",
-                        leaf: true
-                    },
-                    {
                         text: "Risikoursachen",
                         iconCls: "x-fa fa-file",
                         xtype: "ursachenview",
+                        leaf: true
+                    },
+                    {
+                        text: "Risiken (Datenansicht)",
+                        iconCls: "x-fa fa-list-alt",
+                        xtype: "dataview",
+                        leaf: true
+                    },
+                    {
+                        text: "Risiken (Listenansicht)",
+                        iconCls: "x-fa fa-th-list",
+                        xtype: "risikoview",
                         leaf: true
                     },
                     {
@@ -69,19 +76,19 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         iconCls: "x-fa fa-indent",
                         xtype: "auswirkungview",
                         leaf: true
-                    }, {
-                        text: "Risiken (Datenansicht)",
-                        iconCls: "x-fa fa-list-alt",
-                        xtype: "dataview",
-                        leaf: true
                     },
                     {
-                        text: "Risikofelder",
+                        text: "Risikofelder (Listenansicht)",
                         iconCls: "x-fa fa-align-justify",
                         xtype: "risikofelderview",
                         leaf: true
                     },
-
+                    {
+                        text: "Risikofelder (Datenansicht)",
+                        iconCls: "x-fa fa-align-justify",
+                        xtype: "felderpanelview",
+                        leaf: true
+                    }
                 ]
             }
         }

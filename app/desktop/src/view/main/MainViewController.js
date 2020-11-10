@@ -15,6 +15,12 @@ Ext.define("SORISMA.view.main.MainViewController", {
             conditions: {
                 ":id": "([0-9]+)"
             }
+        },
+        "felderpanelview/:id": {
+            action: "showFelderData",
+            conditions: {
+                ":id": "([0-9]+)"
+            }
         }
     },
 
@@ -72,6 +78,34 @@ Ext.define("SORISMA.view.main.MainViewController", {
         menuview.setSelection(node);
     },
 
+    showFelderData: function (id) {
+        var me = this;
+
+        me.getViewModel().set("main_felderID", id);
+        var centerview = me.lookup("centerview");
+        var navview = this.lookup("navview");
+        var menuview = navview.items.items[0];
+        var node = menuview.getStore().findNode("xtype", "felderpanelview");
+        if (!centerview.getComponent("felderpanelview")) {
+            centerview.add({
+                xtype: "felderpanelview",
+                itemId: "felderpanelview",
+                heading: node.get("text")
+            });
+        }
+        centerview.setActiveItem("felderpanelview");
+        var vm = this.getViewModel();
+        vm.set("heading", node.get("text"));
+
+        var felderview = centerview.query('felderpanelview')[0];
+        if (felderview) {
+            var felderController = felderview.getController();
+            felderController.reloadFelderData();
+        }
+        menuview.setSelection(node);
+    },
+
+
     mainRoute: function (xtype) {
         var navview = this.lookup("navview");
         var menuview = navview.items.items[0];
@@ -115,6 +149,16 @@ Ext.define("SORISMA.view.main.MainViewController", {
         menuview.setSelection(node);
         var vm = this.getViewModel();
         vm.set("heading", node.get("text"));
+
+        var felderview = Ext.getCmp("felderpanelview");
+        if (felderview) {
+            var felderController = felderview.getController();
+            felderController.reloadFelderData();
+        }
+        centerview.setActiveItem(xtype);
+        menuview.setSelection(node);
+        var vm = this.getViewModel();
+        vm.set("heading", node.get("text"));
     },
 
 
@@ -133,6 +177,10 @@ Ext.define("SORISMA.view.main.MainViewController", {
                 else if (nodeXtype === "dataview") {
                     var activeriskID = vm.get('main_risikoID');
                     this.redirectTo(nodeXtype + "/" + activeriskID);
+                }
+                else if (nodeXtype === "felderpanelview") {
+                    var activefelderID = vm.get('main_felderID');
+                    this.redirectTo(nodeXtype + "/" + activefelderID);
                 }
                 else {
                     this.redirectTo(nodeXtype);
