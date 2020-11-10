@@ -42,13 +42,13 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
             },
             margin: "0 10 0 0",
             bind: {
-                html: '<b style="font-size:14px">{data_felderName}</b>',
+                html: '<h1 style="text-align:center">{data_felderName}</h1>',
             }
         },
         {
             title: "Kurzbeschreibung",
             width: '38%',
-            height: '40%',
+            height: '45%',
             split: true,
             header: {
                 style: {
@@ -58,30 +58,14 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
             bind: {
                 html:
                     '<ul style="font-size:16px">{data_kurzbeschreibung}</ul>',
-            },
-            items: [
-                {
-                    xtype: 'panel',
-                    title: "Veränderte Bedeutung des Risikofelds durch Industrie 4.0",
-                    width: '95%',
-                    height: 120,
-                    split: true,
-                    header: {
-                        style: {
-                            backgroundColor: '#7f7f7f'
-                        }
-                    },
-                    margin: "0 10 0 0",
-                    bind: {
-                        html: '<p style="font-size:16px">{data_riskLevel}</p>'
-                    }
-                }
-            ]
+            }
+
         },
+
         {
             title: "Einordnung des Risikofelds",
             width: '60%',
-            height: '40%',
+            height: '45%',
             layout: {
                 type: "float"
             },
@@ -95,8 +79,12 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
                     xtype: 'panel',
                     title: "Soziotechnische Dimension",
                     width: '49%',
-                    height: 120,
+                    height: 180,
                     split: true,
+                    border: true,
+                    style: {
+                        border: '.5px solid grey'
+                    },
                     flex: 1,
                     header: {
                         style: {
@@ -105,15 +93,19 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
                     },
                     margin: "0 10 0 0",
                     bind: {
-                        html: '<b style="font-size:14px">{data_dimension}</b>',
+                        html: '<ul style="font-size:16px">{data_dimension}</ul>',
                     }
                 },
                 {
                     xtype: 'panel',
                     title: "Stoßrichtung der Digitalisierung",
                     width: '45%',
-                    height: 120,
+                    height: 180,
                     margin: "0 11 0 0",
+                    border: true,
+                    style: {
+                        border: '.5px solid grey'
+                    },
                     header: {
                         style: {
                             backgroundColor: '#7f7f7f'
@@ -125,7 +117,27 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
                             '<ul style="font-size:16px">{data_stossrichtung}</ul>',
 
                     }
-                }
+                },
+                {
+                    xtype: 'panel',
+                    title: "Veränderte Bedeutung des Risikofelds durch Industrie 4.0",
+                    width: '95.3%',
+                    height: 140,
+                    split: true,
+                    border: true,
+                    style: {
+                        border: '.5px solid grey'
+                    },
+                    header: {
+                        style: {
+                            backgroundColor: '#7f7f7f'
+                        }
+                    },
+                    margin: "0 10 0 0",
+                    bind: {
+                        html: '<p style="font-size:16px">{data_riskLevel}</p>'
+                    }
+                },
             ]
         },
         {

@@ -38,24 +38,24 @@ Ext.define('SORISMA.view.risiko.risiko', {
             editable: false,
             width: 150
         },
-        {
-            text: 'Risikofelder zeigen',
-            width: 200,
-            hideable: false,
-            sortable: false,
-            disableSelection: true,
-            menuDisabled: true,
-            rowSelect: false,
-            cell: {
-                tools: {
-                    approve: {
-                        iconCls: "x-fa fa-angle-double-right",
-                        handler: 'onButton'
-                    }
-                }
-            }
+        // {
+        //     text: 'Risikofelder zeigen',
+        //     width: 200,
+        //     hideable: false,
+        //     sortable: false,
+        //     disableSelection: true,
+        //     menuDisabled: true,
+        //     rowSelect: false,
+        //     cell: {
+        //         tools: {
+        //             approve: {
+        //                 iconCls: "x-fa fa-angle-double-right",
+        //                 handler: 'onButton'
+        //             }
+        //         }
+        //     }
 
-        }
+        // }
     ],
 
     listeners: {
