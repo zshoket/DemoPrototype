@@ -5,7 +5,7 @@ Ext.define('SORISMA.store.risikofelderViewStore', {
 
     proxy: {
         type: "ajax",
-        url: "http://localhost:3001/api/risikoFelders",
+        url: "http://51.15.76.202:3001/api/risikoFelders",
         headers: {
             Accept: "application/json"
         },

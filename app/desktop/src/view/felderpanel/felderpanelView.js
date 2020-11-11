@@ -29,7 +29,7 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
     },
     items: [
         {
-            title: "Risikorisikofelder",
+            title: " ",
             width: '98%',
             height: '18%',
             split: true,
@@ -80,19 +80,19 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
                     bind: {
                         html: '<p style="font-size:16px">{data_riskLevel}</p>'
                     },
-                    items: [
-                        {
-                            xtype: 'slider',
-                            width: '80%',
-                            values: ['25', '50', '75'],
-                            increment: 25,
-                            minValue: 0,
-                            maxValue: 100,
-                            constrainThumbs: true
+                    // items: [
+                    //     {
+                    //         xtype: 'slider',
+                    //         width: '80%',
+                    //         values: ['25', '50', '75'],
+                    //         increment: 25,
+                    //         minValue: 0,
+                    //         maxValue: 100,
+                    //         constrainThumbs: true
 
-                        },
+                    //     },
 
-                    ]
+                    // ]
                 }
             ]
 
