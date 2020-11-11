@@ -43,7 +43,7 @@ Ext.define('SORISMA.view.dataview.dataView', {
         },
         {
             title: "Kennung",
-            width: '18.5%',
+            width: '18.3%',
             height: 120,
             split: true,
             flex: 1,
