@@ -202,7 +202,28 @@ Ext.define('SORISMA.view.felderpanel.felderpanelView', {
                     '<ul style="font-size:16px">{data_charRisikoauswirkungen}</ul>',
             },
         },
+        {
 
+            xtype: 'button',
+            docked: true,
+            docked: 'bottom',
+            width: 250,
+            floating: true,
+            style: { position: 'absolute', bottom: '10px', right: '10px' },
+            text: 'Show Next Risikofelder',
+            handler: 'onButtonFwd'
+        },
+        {
+
+            xtype: 'button',
+            docked: true,
+            width: 250,
+            floating: true,
+            style: { position: 'absolute', bottom: '10px', left: '10px' },
+            docked: 'bottom',
+            text: 'Show Previous Risikofelder',
+            handler: 'onButtonBack'
+        }
     ]
 
 });

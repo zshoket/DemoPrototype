@@ -65,6 +65,32 @@ Ext.define('SORISMA.view.felderpanel.felderpanelViewController', {
             vm.set('data_dimension', strdimension)
 
         }
+    },
+
+    onButtonFwd: function (button) {
+
+        var lastPart = window.location.href.split("/").pop();
+        // this.redirectTo('#felderpanelview/2');
+        lastPart++;
+        if (lastPart <= 10) {
+            this.redirectTo('#felderpanelview/' + lastPart);
+        }
+        else {
+            Ext.Msg.alert('Keine Risikofelder mehr');
+        }
+    },
+
+    onButtonBack: function (button) {
+
+        var lastPart = window.location.href.split("/").pop();
+        // this.redirectTo('#felderpanelview/2');
+        lastPart--;
+        if (lastPart <= 10) {
+            this.redirectTo('#felderpanelview/' + lastPart);
+        }
+        if (lastPart == -1) {
+            Ext.Msg.alert('Sie sind am Start');
+        }
     }
 });
 
