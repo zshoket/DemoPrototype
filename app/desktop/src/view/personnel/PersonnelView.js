@@ -1,10 +1,10 @@
-Ext.define('SORISMA.view.personnel.PersonnelView',{
+Ext.define('SORISMA.view.personnel.PersonnelView', {
     extend: 'Ext.grid.Grid',
     xtype: 'personnelview',
     cls: 'personnelview',
-    controller: {type: 'personnelviewcontroller'},
-    viewModel: {type: 'personnelviewmodel'},
-    store: {type: 'personnelviewstore'},
+    controller: { type: 'personnelviewcontroller' },
+    viewModel: { type: 'personnelviewmodel' },
+    store: { type: 'personnelviewstore' },
     rowNumbers: true,
     // plugins: {
     //     rowedit: {
@@ -15,10 +15,10 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
         {
             text: 'Name',
             dataIndex: 'name',
-            editable: false, 
+            editable: false,
             width: 250,
-            cell: {userCls: 'bold'},
-            
+            cell: { userCls: 'bold' },
+
         },
         {
             text: 'Dimension',
@@ -26,12 +26,12 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
             editable: false,
             width: 150
         },
-       /*  {
-            text: 'Unternehmen',
-            dataIndex: 'unternehmen_id',
-            editable: false,
-            width: 230
-        }, */
+        /*  {
+             text: 'Unternehmen',
+             dataIndex: 'unternehmen_id',
+             editable: false,
+             width: 230
+         }, */
         {
             text: 'Einordnung in die Wertschöpfungs-kette',
             dataIndex: 'einordnungKette',
@@ -74,30 +74,30 @@ Ext.define('SORISMA.view.personnel.PersonnelView',{
             editable: false,
             width: 230
         },
-        {
-            text: 'Risiken anzeigen',
-            width: 140,
-            hideable: false,
-            sortable: false,
-            disableSelection: true,
-            menuDisabled: true,
-            rowSelect: false,
-            cell: {
-                tools: {
-                    approve: {
-                    iconCls: "x-fa fa-forward",
-                    handler: 'onApprove'
-                    }
-                 }
-            }
-            
-        }          
+        // {
+        //     text: 'Risiken anzeigen',
+        //     width: 140,
+        //     hideable: false,
+        //     sortable: false,
+        //     disableSelection: true,
+        //     menuDisabled: true,
+        //     rowSelect: false,
+        //     cell: {
+        //         tools: {
+        //             approve: {
+        //             iconCls: "x-fa fa-forward",
+        //             handler: 'onApprove'
+        //             }
+        //          }
+        //     }
+
+        // }          
     ],
-        listeners: {
-                
-            select: 'onItemSelected',
-           
-                }
-    
+    listeners: {
+
+        select: 'onItemSelected',
+
+    }
+
 
 });

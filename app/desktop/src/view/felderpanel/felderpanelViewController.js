@@ -90,6 +90,7 @@ Ext.define('SORISMA.view.felderpanel.felderpanelViewController', {
         }
         if (lastPart == -1) {
             Ext.Msg.alert('Sie sind am Start');
+            this.redirectTo('#felderpanelview/' + 0);
         }
     }
 });
