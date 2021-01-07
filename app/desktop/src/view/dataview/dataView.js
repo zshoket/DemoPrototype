@@ -27,7 +27,7 @@ Ext.define('SORISMA.view.dataview.dataView', {
     },
     items: [
         {
-            title: "Steckbrief",
+            title: "Risiko",
             width: '80%',
             height: 120,
             split: true,
@@ -38,7 +38,7 @@ Ext.define('SORISMA.view.dataview.dataView', {
             },
             margin: "0 10 0 0",
             bind: {
-                html: '<b style="font-size:14px">{data_riskDocument}</b>',
+                html: '<b style="font-size:14px">{data_riskName}</b>',
             }
         },
         {
@@ -54,12 +54,12 @@ Ext.define('SORISMA.view.dataview.dataView', {
             },
             margin: "0 10 0 0",
             bind: {
-                html: '<b style="font-size:14px">{data_identifikator}</b>',
+                html: '<p style="font-size:14px">{data_identifikator}</p>',
             }
         },
         {
             title: "Risikoursachen",
-            width: '38.7%',
+            width: '49.4%',
             height: '50%',
             margin: "0 11 0 0",
             header: {
@@ -70,28 +70,13 @@ Ext.define('SORISMA.view.dataview.dataView', {
             split: true,
             bind: {
                 html:
-                    '<ul style="font-size:16px">{data_risikoUrsachen}</ul>',
+                    '<ul style="font-size:14px">{data_risikoUrsachen}</ul>',
                 //"line-height:180%"
             }
         },
         {
-            title: "Risiko",
-            width: '21%',
-            height: '50%',
-            split: true,
-            header: {
-                style: {
-                    backgroundColor: '#7f7f7f'
-                }
-            },
-            margin: "0 10 0 0",
-            bind: {
-                html: '<p style="font-size:16px">{data_riskName}</p>'
-            }
-        },
-        {
             title: "Risikoauswirkungen",
-            width: '38%',
+            width: '49%',
             height: '50%',
             split: true,
             header: {
@@ -101,8 +86,23 @@ Ext.define('SORISMA.view.dataview.dataView', {
             },
             bind: {
                 html:
-                    '<ul style="font-size:16px">{data_risikoAuswirkung}</ul>',
+                    '<ul style="font-size:14px">{data_risikoAuswirkung}</ul>',
             },
+        },
+        {
+            title: "Steckbrief",
+            width: '99.3%',
+            height: '15%',
+            split: true,
+            header: {
+                style: {
+                    backgroundColor: '#7f7f7f'
+                }
+            },
+            margin: "0 10 0 0",
+            bind: {
+                html: '<p style="font-size:14px">{data_riskDocument}</p>'
+            }
         }
     ]
 

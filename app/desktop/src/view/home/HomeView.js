@@ -45,7 +45,7 @@ Ext.define("SORISMA.view.home.HomeView", {
             },
             margin: "0 10 0 0",
             bind: {
-                html: '<p style="font-size:14px">{home_name}</p>'
+                html: '<b style="font-size:14px">{home_name}</b>'
             }
         },
         {
@@ -61,7 +61,7 @@ Ext.define("SORISMA.view.home.HomeView", {
             },
             margin: "0 10 0 0",
             bind: {
-                html: '<b style="font-size:14px">{home_dimension}</b>',
+                html: '<p style="font-size:14px">{home_dimension}</p>',
             }
         },
         {
@@ -109,52 +109,29 @@ Ext.define("SORISMA.view.home.HomeView", {
                     width: 300,
                     cls: "x-check-group-alt",
                     horizontal: true,
-                    /*                     listeners: {
-                                            change: function (field, newValue, oldValue) {
-                                                var group = field.up('checkboxgroup');
-                    
-                                                if (field.name == 'Basis-Lösung') {
-                                                    group.doCheckUnCheckAll(newValue);
-                                                } else {
-                                                    var len = group.query('[name=mycheck]').length,
-                                                        allCB = group.down('[name=all]');
-                    
-                                                    if (newValue) {
-                                                        group.checkedArr.push(field.inputValue)
-                                                    } else {
-                                                        Ext.Array.remove(group.checkedArr, field.inputValue);
-                                                    }
-                                                    group.doSetCBValue(allCB, len == group.checkedArr.length);
-                                                }     
-                                    },
-                    
-                                                doSetCBValue: function (f, v) {
-                                                    //Check or uncheck
-                                                    f.suspendEvent('change');
-                                                    f.setValue(v);
-                                                    f.resumeEvent('change');
-                                                },
-                                            },
-                                            doCheckUnCheckAll: function (isCheck) {
-                                                this.query('[name=mycheck]').forEach(f => {
-                                                    this.doSetCBValue(f, isCheck);
-                                                    //For checking to other checkbox is checked or not
-                                                    if (isCheck) {
-                                                        if (this.checkedArr.indexOf(f.inputValue) == -1)
-                                                            this.checkedArr.push(f.inputValue);
-                                                    } else {
-                                                        Ext.Array.remove(this.checkedArr, f.inputValue);
-                                                    }
-                                                });
-                                            }, */
+                    listeners: {
+                        change: 'myCheck'
+                    },
                     columns: 1,
                     items: [
                         {
                             boxLabel: "Basis-Lösung",
                             name: "cb-col-1",
+                            disabled: true,
+                            checked: false,
                         },
-                        { boxLabel: "Schlüssel-Lösung", name: "cb-col-2" },
-                        { boxLabel: "Schrittmacher-Lösung", name: "cb-col-3", checked: true }
+                        {
+                            boxLabel: "Schlüssel-Lösung",
+                            name: "cb-col-2",
+                            disabled: true,
+                            checked: false
+                        },
+                        {
+                            boxLabel: "Schrittmacher-Lösung",
+                            name: "cb-col-3",
+                            disabled: true,
+                            checked: true
+                        }
                     ]
                 }
             ]
@@ -254,6 +231,35 @@ Ext.define("SORISMA.view.home.HomeView", {
                 html:
                     '<ul style="font-size:14px">{home_veraenderungenTechnologie}</ul>'
             },
-        }
+        },
+        {
+            title: "",
+            width: "99%",
+            height: "8%",
+            split: false,
+            header: false,
+            items: [
+                {
+                    xtype: "button",
+                    docked: true,
+                    docked: "bottom",
+                    iconCls: "x-fa fa-forward fa-3x",
+                    tooltip: "Nächstes Steckbrief",
+                    floating: true,
+                    style: { position: "absolute", bottom: "10px", right: "10px" },
+                    handler: "onNextSteck",
+                },
+                {
+                    xtype: "button",
+                    docked: true,
+                    floating: true,
+                    iconCls: "x-fa fa-3x fa-backward",
+                    style: { position: "absolute", bottom: "10px", left: "10px" },
+                    docked: "bottom",
+                    tooltip: "Voriger Steckbrief",
+                    handler: "onPrevSteck",
+                },
+            ],
+        },
     ]
 });

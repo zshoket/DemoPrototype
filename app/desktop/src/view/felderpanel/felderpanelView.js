@@ -29,7 +29,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
     items: [
         {
-            title: " ",
+            title: "Name",
             width: "98%",
             height: "18%",
             split: true,
@@ -41,12 +41,12 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
             },
             margin: "0 10 0 0",
             bind: {
-                html: '<h1 style="text-align:center">{data_felderName}</h1>',
+                html: '<h1 style="font-size:14px">{data_felderName}</h1>',
             },
         },
         {
             title: "Kurzbeschreibung",
-            width: "53%",
+            width: "52%",
             height: "45%",
             split: true,
             header: {
@@ -61,7 +61,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                     height: "60%",
                     header: false,
                     bind: {
-                        html: '<ul style="font-size:13px">{data_kurzbeschreibung}</ul>',
+                        html: '<ul style="font-size:14px">{data_kurzbeschreibung}</ul>',
                     },
                 },
                 {
@@ -78,7 +78,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                     },
                     margin: "0 10 0 0",
                     bind: {
-                        html: '<p style="font-size:16px">{data_riskLevel}</p>',
+                        html: '<p style="font-size:14px">{data_riskLevel}</p>',
                     },
                     // items: [
                     //     {
@@ -100,7 +100,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
 
         {
             title: "Einordnung des Risikofelds",
-            width: "45%",
+            width: "46%",
             height: "45%",
             layout: {
                 type: "float",
@@ -114,7 +114,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                 {
                     xtype: "panel",
                     title: "Soziotechnische Dimension",
-                    width: "39%",
+                    width: "48.5%",
                     height: 180,
                     split: true,
                     border: true,
@@ -129,13 +129,13 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                     },
                     margin: "0 10 0 0",
                     bind: {
-                        html: '<ul style="font-size:16px">{data_dimension}</ul>',
+                        html: '<ul style="font-size:14px">{data_dimension}</ul>',
                     },
                 },
                 {
                     xtype: "panel",
                     title: "Stoßrichtung der Digitalisierung",
-                    width: "42%",
+                    width: "48.5%",
                     height: 180,
                     margin: "0 11 0 0",
                     border: true,
@@ -149,7 +149,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                     },
                     split: true,
                     bind: {
-                        html: '<ul style="font-size:16px">{data_stossrichtung}</ul>',
+                        html: '<ul style="font-size:14px">{data_stossrichtung}</ul>',
                     },
                 },
             ],
@@ -165,7 +165,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                 },
             },
             bind: {
-                html: '<ul style="font-size:16px">{data_charRisikoursachen}</ul>',
+                html: '<ul style="font-size:14px">{data_charRisikoursachen}</ul>',
             },
         },
         {
@@ -179,7 +179,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                 },
             },
             bind: {
-                html: '<ul style="font-size:16px">{data_charRisiken}</ul>',
+                html: '<ul style="font-size:14px">{data_charRisiken}</ul>',
             },
         },
         {
@@ -193,7 +193,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                 },
             },
             bind: {
-                html: '<ul style="font-size:16px">{data_charRisikoauswirkungen}</ul>',
+                html: '<ul style="font-size:14px">{data_charRisikoauswirkungen}</ul>',
             },
         },
         {
@@ -210,7 +210,8 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                     width: '25%',
                     floating: true,
                     style: { position: "absolute", bottom: "10px", right: "10px" },
-                    text: "Nächstes Risikofeld anzeigen",
+                    iconCls: "x-fa fa-3x fa-forward",
+                    tooltip: "Nächstes Risikofeld",
                     handler: "onButtonFwd",
                 },
                 {
@@ -220,7 +221,8 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                     floating: true,
                     style: { position: "absolute", bottom: "10px", left: "10px" },
                     docked: "bottom",
-                    text: "Vorheriges Risikofeld anzeigen",
+                    iconCls: "x-fa fa-3x fa-backward",
+                    tooltip: "Voriges Risikofeld",
                     handler: "onButtonBack",
                 },
             ],

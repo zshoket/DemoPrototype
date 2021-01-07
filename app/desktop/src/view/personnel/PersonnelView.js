@@ -74,24 +74,24 @@ Ext.define('SORISMA.view.personnel.PersonnelView', {
             editable: false,
             width: 230
         },
-        // {
-        //     text: 'Risiken anzeigen',
-        //     width: 140,
-        //     hideable: false,
-        //     sortable: false,
-        //     disableSelection: true,
-        //     menuDisabled: true,
-        //     rowSelect: false,
-        //     cell: {
-        //         tools: {
-        //             approve: {
-        //             iconCls: "x-fa fa-forward",
-        //             handler: 'onApprove'
-        //             }
-        //          }
-        //     }
+        {
+            text: 'Risiken anzeigen',
+            width: 140,
+            hideable: false,
+            sortable: false,
+            disableSelection: true,
+            menuDisabled: true,
+            rowSelect: false,
+            cell: {
+                tools: {
+                    approve: {
+                        iconCls: "x-fa fa-forward",
+                        handler: 'onApprove'
+                    }
+                }
+            }
 
-        // }          
+        }
     ],
     listeners: {
 

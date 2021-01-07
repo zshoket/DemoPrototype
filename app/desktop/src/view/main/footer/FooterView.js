@@ -7,7 +7,7 @@ Ext.define('SORISMA.view.main.footer.FooterView', {
         {
             xtype: 'container',
             cls: 'footerviewtext',
-        html: 'Sorisma Risiko Demo' 
+            html: 'SORISMA App'
             //bind: { html: '{name} footer' }
         }
     ]

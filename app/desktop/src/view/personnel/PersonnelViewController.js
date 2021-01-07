@@ -20,8 +20,34 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
               } else {
                   this.redirectTo('#homeview/' + row);
               }
-          }
-      
+          },
+
+            onApprove: function (grid, info) {
+            var myId = info.record.get('id');
+            var url1 = "http://51.15.76.202:3001/api/documents/" + myId + "/risikos";  
+                const getJSON = async url => {
+                    try {
+                        const response = await fetch(url);
+                        if (!response.ok) 
+                            throw new Error(response.statusText);
+
+                        const data = await response.json(); 
+                        return data; 
+                    } catch (error) {
+                        return error;
+                    }
+                }
+                getJSON(url1).then(data => {
+                    if (data.length == 0){
+                        Ext.Msg.alert('No Risks Found');
+                    } else
+                    {
+                        window.location = url1;
+                    }
+                }).catch(error => {
+                    console.error(error);
+                });
+}
  
 });
 

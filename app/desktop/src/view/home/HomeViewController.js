@@ -86,6 +86,39 @@ Ext.define('SORISMA.view.home.HomeViewController', {
 		}
 	},
 
+
+	myCheck: function (field, newValue, oldValue, eOpts) {
+
+
+	},
+
+	onNextSteck: function (button) {
+
+		var lastPart = window.location.href.split("/").pop();
+		// this.redirectTo('#felderpanelview/2');
+		lastPart++;
+		if (lastPart <= 55) {
+			this.redirectTo('#homeview/' + lastPart);
+		}
+		else {
+			Ext.Msg.alert('Kein Steckbrief mehr');
+		}
+	},
+
+	onPrevSteck: function (button) {
+
+		var lastPart = window.location.href.split("/").pop();
+		// this.redirectTo('#felderpanelview/2');
+		lastPart--;
+		if (lastPart <= 55) {
+			this.redirectTo('#homeview/' + lastPart);
+		}
+		if (lastPart == -1) {
+			Ext.Msg.alert('Sie sind am Start');
+			this.redirectTo('#homeview/' + 0);
+		}
+	}
+
 });
 
 
