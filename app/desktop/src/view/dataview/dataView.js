@@ -38,7 +38,7 @@ Ext.define('SORISMA.view.dataview.dataView', {
             },
             margin: "0 10 0 0",
             bind: {
-                html: '<b style="font-size:14px">{data_riskName}</b>',
+                html: '<p style="font-size:14px;font-weight:bold">{data_riskName}</p>',
             }
         },
         {

@@ -7,9 +7,10 @@
   "indexHtmlPath": "index.html",
   "requires": [
     "font-awesome",
-        "d3"
-    ],
-
+    "d3",
+    "modern-locale"
+  ],
+  "locale": "de_DE",
   "builds": {
     "desktop": {
       "toolkit": "modern",
@@ -22,13 +23,16 @@
       }
     }
   },
-
-  "classpath": ["app/shared/src","app/${build.id}/src"],
-  "overrides": ["app/shared/overrides","app/${build.id}/overrides"],
-
+  "classpath": [
+    "app/shared/src",
+    "app/${build.id}/src"
+  ],
+  "overrides": [
+    "app/shared/overrides",
+    "app/${build.id}/overrides"
+  ],
   "sass": {
     "namespace": "SORISMA",
-
     "etc": [
       "sass/etc/all.scss"
     ],
@@ -41,51 +45,67 @@
       "app/${build.id}/sass/src.scss"
     ]
   },
-
   "resources": [
-    { "path": "resources", "output": "shared" }
-
-    ,{ "path": "resources/${build.id}" }
-
+    {
+      "path": "resources",
+      "output": "shared"
+    },
+    {
+      "path": "resources/${build.id}"
+    }
   ],
-
   "output": {
     "base": "${workspace.build.dir}/${build.environment}/${app.name}",
     "page": "index.html",
     "manifest": "generatedFiles/${build.id}.json",
     "js": "generatedFiles/${build.id}/app.js",
-    "appCache": {"enable": false},
+    "appCache": {
+      "enable": false
+    },
     "resources": {
       "path": "${build.id}/resources",
       "shared": "resources"
     }
   },
-  
   "fashion": {
-   "missingParameters": "error",
-    "inliner": {"enable": false}
+    "missingParameters": "error",
+    "inliner": {
+      "enable": false
+    }
   },
-
   "js": [
-    {"path": "app.js", "bundle": true}
+    {
+      "path": "app.js",
+      "bundle": true
+    }
   ],
-
-  "classic": {"js": []},
-  "modern": {"js": []},
-
+  "classic": {
+    "requires": [
+      "ext-locale"
+    ],
+    "locale": "de",
+    "locales": [
+      "en",
+      "de"
+    ],
+    "js": []
+  },
+  "modern": {
+    "js": []
+  },
   "css": [
     {
       "path": "${build.out.css.path}",
       "bundle": true,
-      "exclude": ["fashion"]
+      "exclude": [
+        "fashion"
+      ]
     }
   ],
-
   "loader": {
     "cache": false,
     "cacheParam": "_dc"
   },
-
   "production": {
     "output": {
       "appCache": {
@@ -103,34 +123,34 @@
       "type": "yui"
     }
   },
-
   "testing": {},
-
   "development": {
     "watch": {
       "delay": 250
     }
   },
-
   "bootstrap": {
     "base": "${app.dir}/generatedFiles",
     "manifest": "${build.id}.json",
     "microloader": "bootstrap.js",
     "css": "bootstrap.css"
   },
-
   "cache": {
-      "enable": false,
-      "deltas": "${build.id}/deltas"
+    "enable": false,
+    "deltas": "${build.id}/deltas"
   },
-
   "appCache": {
-    "cache": ["index.html"],
-    "network": ["*"],
+    "cache": [
+      "index.html"
+    ],
+    "network": [
+      "*"
+    ],
     "fallback": []
   },
-
   "archivePath": "archive/${build.id}",
-  "ignore": ["(^|/)CVS(/?$|/.*?$)"],
+  "ignore": [
+    "(^|/)CVS(/?$|/.*?$)"
+  ],
   "id": "d170f386-324d-4995-aa02-3a7895c4eef6"
 }

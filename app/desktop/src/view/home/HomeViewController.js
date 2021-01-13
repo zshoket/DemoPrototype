@@ -87,15 +87,17 @@ Ext.define('SORISMA.view.home.HomeViewController', {
 	},
 
 
-	myCheck: function (field, newValue, oldValue, eOpts) {
+	myCheck: function (newValue, oldValue) {
 
+		var new1 = Ext.ComponentQuery.query('checkboxgroup')[0];
+		alert(new1);
 
 	},
 
 	onNextSteck: function (button) {
 
 		var lastPart = window.location.href.split("/").pop();
-		// this.redirectTo('#felderpanelview/2');
+
 		lastPart++;
 		if (lastPart <= 55) {
 			this.redirectTo('#homeview/' + lastPart);
@@ -108,7 +110,7 @@ Ext.define('SORISMA.view.home.HomeViewController', {
 	onPrevSteck: function (button) {
 
 		var lastPart = window.location.href.split("/").pop();
-		// this.redirectTo('#felderpanelview/2');
+
 		lastPart--;
 		if (lastPart <= 55) {
 			this.redirectTo('#homeview/' + lastPart);

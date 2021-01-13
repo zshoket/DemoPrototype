@@ -39,7 +39,7 @@ Ext.define('SORISMA.view.personnel.PersonnelViewController', {
                 }
                 getJSON(url1).then(data => {
                     if (data.length == 0){
-                        Ext.Msg.alert('No Risks Found');
+                        Ext.Msg.alert('Kein Risiko gefunden');
                     } else
                     {
                         window.location = url1;

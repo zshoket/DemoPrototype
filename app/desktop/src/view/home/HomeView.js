@@ -36,6 +36,7 @@ Ext.define("SORISMA.view.home.HomeView", {
         {
             title: "Name",
             width: '80%',
+            height: 100,
             flex: 1,
             split: true,
             header: {
@@ -45,7 +46,7 @@ Ext.define("SORISMA.view.home.HomeView", {
             },
             margin: "0 10 0 0",
             bind: {
-                html: '<b style="font-size:14px">{home_name}</b>'
+                html: '<p style="font-size:14px;font-weight:bold">{home_name}</p>'
             }
         },
         {
@@ -61,7 +62,8 @@ Ext.define("SORISMA.view.home.HomeView", {
             },
             margin: "0 10 0 0",
             bind: {
-                html: '<p style="font-size:14px">{home_dimension}</p>',
+                html: '<p style="font-size:14px"> {home_dimension} </p>',
+                // html: '<body>{home_dimension}</body>'
             }
         },
         {
@@ -243,8 +245,9 @@ Ext.define("SORISMA.view.home.HomeView", {
                     xtype: "button",
                     docked: true,
                     docked: "bottom",
+                    width: '5%',
                     iconCls: "x-fa fa-forward fa-3x",
-                    tooltip: "Nächstes Steckbrief",
+                    tooltip: "nächster Steckbrief",
                     floating: true,
                     style: { position: "absolute", bottom: "10px", right: "10px" },
                     handler: "onNextSteck",
@@ -253,10 +256,11 @@ Ext.define("SORISMA.view.home.HomeView", {
                     xtype: "button",
                     docked: true,
                     floating: true,
+                    width: '5%',
                     iconCls: "x-fa fa-3x fa-backward",
                     style: { position: "absolute", bottom: "10px", left: "10px" },
                     docked: "bottom",
-                    tooltip: "Voriger Steckbrief",
+                    tooltip: "voriger Steckbrief",
                     handler: "onPrevSteck",
                 },
             ],
