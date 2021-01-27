@@ -47,7 +47,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         {
             title: "Kurzbeschreibung",
             width: "52%",
-            height: "45%",
+            height: "47%",
             split: true,
             header: {
                 style: {
@@ -101,7 +101,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         {
             title: "Einordnung des Risikofelds",
             width: "46%",
-            height: "45%",
+            height: "47%",
             layout: {
                 type: "float",
             },
@@ -114,8 +114,8 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                 {
                     xtype: "panel",
                     title: "Soziotechnische Dimension",
-                    width: "48.5%",
-                    height: 180,
+                    width: "47.9%",
+                    height: 170,
                     split: true,
                     border: true,
                     style: {
@@ -135,8 +135,8 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
                 {
                     xtype: "panel",
                     title: "Stoßrichtung der Digitalisierung",
-                    width: "48.5%",
-                    height: 180,
+                    width: "47.9%",
+                    height: 170,
                     margin: "0 11 0 0",
                     border: true,
                     style: {
@@ -157,7 +157,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         {
             title: "Charakteristische Risikoursachen",
             width: "33%",
-            height: "25%",
+            height: "27%",
             split: true,
             header: {
                 style: {
@@ -171,7 +171,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         {
             title: "Charakteristische Risiken",
             width: "33%",
-            height: "25%",
+            height: "27%",
             split: true,
             header: {
                 style: {
@@ -185,7 +185,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         {
             title: "Charakteristische Risikoauswirkungen",
             width: "32%",
-            height: "25%",
+            height: "27%",
             split: true,
             header: {
                 style: {

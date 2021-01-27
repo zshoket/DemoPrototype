@@ -25,6 +25,24 @@ Ext.define('SORISMA.view.auswirkung.auswirkung', {
             dataIndex: 'identifikator',
             editable: false,
             width: 150
+        },
+        {
+            text: 'Filtered List',
+            width: 140,
+            hideable: false,
+            sortable: false,
+            disableSelection: true,
+            menuDisabled: true,
+            rowSelect: false,
+            cell: {
+                tools: {
+                    approve: {
+                        iconCls: "x-fa fa-forward",
+                        handler: 'popUpGrid'
+                    }
+                }
+            }
+
         }
     ],
 

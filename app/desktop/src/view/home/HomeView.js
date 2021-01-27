@@ -204,7 +204,7 @@ Ext.define("SORISMA.view.home.HomeView", {
         },
         {
             title: "Veränderungen Organisation",
-            width: '33%',
+            width: '32.6%',
             height: 170,
             split: true,
             header: {

@@ -2,7 +2,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
     extend: "Ext.app.ViewModel",
     alias: "viewmodel.mainviewmodel",
     data: {
-        //name: '<img src="/uploads/logo.png" alt="Sorismalogo">',
+
         name: '<div><a href="http://51.15.76.202:80/"><img src="/uploads/logo.png" alt="Sorismalogo"></a></div>',
         navCollapsed: false,
         navview_max_width: 300,
@@ -86,7 +86,13 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                         iconCls: "x-fa fa-barcode",
                         xtype: "felderpanelview",
                         leaf: true
-                    }
+                    },
+                    // {
+                    //     text: "Filtered List",
+                    //     iconCls: "x-fa fa-barcode",
+                    //     xtype: "filteredlist",
+                    //     leaf: true
+                    // }
                 ]
             }
         }
