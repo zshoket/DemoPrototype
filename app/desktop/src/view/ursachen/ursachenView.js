@@ -24,8 +24,8 @@ Ext.define('SORISMA.view.ursachen.ursachen', {
             dataIndex: 'identifikator',
             editable: false,
             width: 150
-        }
-        /* {
+        },
+         {
             text: 'Risiken anzeigen',
             width: 140,
             hideable: false,
@@ -42,7 +42,7 @@ Ext.define('SORISMA.view.ursachen.ursachen', {
                  }
             }
             
-        }  */
+        }  
     ],
 
     listeners: {

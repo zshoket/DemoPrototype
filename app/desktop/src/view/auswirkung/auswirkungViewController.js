@@ -1,43 +1,69 @@
-Ext.define('SORISMA.view.auswirkung.auswirkungViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.auswirkungviewcontroller',
+Ext.define("SORISMA.view.auswirkung.auswirkungViewController", {
+  extend: "Ext.app.ViewController",
+  alias: "controller.auswirkungviewcontroller",
 
-    popUpGrid: function (grid, info) {
-        Ext.create('Ext.window.Window', {
-            title: 'Gefilterte Liste',
-            height: 400,
-            // width: 400,
-            layout: 'fit',
-            closeable: false,
-            bbar: [
-                {
-                    text: 'Close',
-                    handler: function () { this.up('window').close(); }
-                }
-            ],
-            autoShow: true,
-            items: {
-                xtype: 'grid',
-                border: true,
-                columns: [
-                    {
-                        text: 'Risk Name',
-                        editable: false,
-                        width: 250,
-                        cell: { userCls: 'bold' },
+  popUpGrid: function (grid, info) {
+    var newId = info.record.get("id");
+    var url1 =
+      "http://51.15.76.202:3001/api/risikoauswirkungs/" + newId + "/risikos";
+    // "http://localhost:3001/api/risikoauswirkungs/" + newId + "/risikos";
 
-                    },
-                    {
-                        text: 'Dimension',
-                        editable: false,
-                        width: 150
-                    },
-                ],
-                store: Ext.create('Ext.data.ArrayStore', {}) // A dummy empty data store
-            }
-        }).show();
-
-
-    }
+    Ext.create("Ext.window.Window", {
+      title: "Gefilterte Liste",
+      height: "50%",
+      width: "30%",
+      layout: "fit",
+      scrollable: true,
+      closeable: false,
+      bbar: [
+        {
+          //   text: "schließen",
+          iconCls: "x-fa fa-3x fa-times",
+          tooltip: "schließen",
+          handler: function () {
+            this.up("window").close();
+          },
+        },
+      ],
+      autoShow: true,
+      items: {
+        xtype: "grid",
+        store: { type: "arraystore" },
+        scrollable: true,
+        border: true,
+        columns: [
+          {
+            text: "Risk Name",
+            editable: false,
+            dataIndex: "name",
+            width: 250,
+            cell: { userCls: "bold" },
+          },
+          {
+            text: "Dimension",
+            dataIndex: "dimension",
+            editable: false,
+            width: 150,
+          },
+        ],
+        store: Ext.create("Ext.data.ArrayStore", {
+          extend: "Ext.data.Store",
+          alias: "store.arraystore",
+          model: "SORISMA.model.Risikos",
+          proxy: {
+            type: "ajax",
+            url: url1,
+            headers: {
+              Accept: "application/json",
+            },
+            reader: {
+              type: "json",
+              rootProperty: "items",
+            },
+          },
+          autoLoad: true,
+        }), // A dummy empty data store
+      },
+    }).show();
+  },
 });
-
