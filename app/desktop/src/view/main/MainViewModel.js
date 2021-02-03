@@ -87,7 +87,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
             leaf: true,
           },
           {
-            text: "Risiko Matrix",
+            text: "Risikobewertung",
             iconCls: "x-fa fa-barcode",
             xtype: "risikomatrix",
             leaf: true,

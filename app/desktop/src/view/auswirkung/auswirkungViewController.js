@@ -9,7 +9,7 @@ Ext.define("SORISMA.view.auswirkung.auswirkungViewController", {
     // "http://localhost:3001/api/risikoauswirkungs/" + newId + "/risikos";
 
     Ext.create("Ext.window.Window", {
-      title: "Gefilterte Liste",
+      title: "Verbundene Risiken",
       height: "50%",
       width: "30%",
       layout: "fit",
@@ -17,7 +17,7 @@ Ext.define("SORISMA.view.auswirkung.auswirkungViewController", {
       closeable: false,
       bbar: [
         {
-          //   text: "schließen",
+          // text: "schließen",
           iconCls: "x-fa fa-3x fa-times",
           tooltip: "schließen",
           handler: function () {

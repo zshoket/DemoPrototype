@@ -8,7 +8,7 @@ Ext.define("SORISMA.view.ursachen.ursachenViewController", {
       "http://51.15.76.202:3001/api/risikoursachens/" + newId + "/risikos";
 
     Ext.create("Ext.window.Window", {
-      title: "Gefilterte Liste",
+      title: "Verbundene Risiken",
       height: "50%",
       width: "30%",
       layout: "fit",

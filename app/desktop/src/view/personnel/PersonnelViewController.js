@@ -40,7 +40,7 @@ Ext.define("SORISMA.view.personnel.PersonnelViewController", {
           Ext.Msg.alert("Kein Risiko gefunden");
         } else {
           Ext.create("Ext.window.Window", {
-            title: "Gefilterte Liste",
+            title: "Verbundene Risiken",
             height: "50%",
             width: "30%",
             layout: "fit",
@@ -48,7 +48,7 @@ Ext.define("SORISMA.view.personnel.PersonnelViewController", {
             closeable: false,
             bbar: [
               {
-                //   text: "schließen",
+                // text: "schließen",
                 iconCls: "x-fa fa-3x fa-times",
                 tooltip: "schließen",
                 handler: function () {
@@ -93,7 +93,7 @@ Ext.define("SORISMA.view.personnel.PersonnelViewController", {
                   },
                 },
                 autoLoad: true,
-              }), // A dummy empty data store
+              }),
             },
           }).show();
         }
@@ -130,7 +130,7 @@ Ext.define("SORISMA.view.personnel.PersonnelViewController", {
       "http://51.15.76.202:3001/api/risikoursachens/" + newId + "/risikos";
 
     Ext.create("Ext.window.Window", {
-      title: "Gefilterte Liste",
+      title: "Verbundene Risiken",
       height: "50%",
       width: "30%",
       layout: "fit",
